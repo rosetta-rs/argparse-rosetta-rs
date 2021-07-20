@@ -1,18 +1,9 @@
-[package]
-name = "pico-args"
-version = "0.4.2"
-authors = ["Evgeniy Reizner <razrfalcon@gmail.com>"]
-edition = "2018"
-keywords = ["args", "cli"]
-license = "MIT"
-description = "An ultra simple CLI arguments parser."
-repository = "https://github.com/RazrFalcon/pico-args"
-documentation = "https://docs.rs/pico-args/"
-readme = "README.md"
-exclude = ["test-apps/**"]
-
-[features]
-default = ["eq-separator"]
-eq-separator = []
-combined-flags = []
-short-space-opt = []
+[workspace]
+members = [
+    "examples/argh-app",
+    "examples/clap-app",
+    "examples/gumdrop-app",
+    "examples/null-app",
+    "examples/pico-args-app",
+    "examples/structopt-app",
+]
