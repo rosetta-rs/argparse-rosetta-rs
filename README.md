@@ -8,9 +8,10 @@ Name                                                 | Style          | Notes
 -----------------------------------------------------|----------------|------
 No-op                                                | N/A            | N/A
 [argh](https://github.com/google/argh)               | `derive`       | 
-[clap](https://github.com/clap-rs/clap)              | Procedural     | Color, suggested fixes, completions
+[clap](https://github.com/clap-rs/clap)              | Imperative     | Color, suggested fixes, completions
 [gumpdrop](https://github.com/murarth/gumdrop)       | `derive`       |
-[pico-args](https://github.com/razrfalcon/pico-args) | Procedural     | No help generation
+[lexopt](https://github.com/murarth/gumdrop)         | Imperative     | No help generation
+[pico-args](https://github.com/razrfalcon/pico-args) | Imperative     | No help generation
 [structopt](https://github.com/texitoi/structopt)    | `derive`       | Color, suggested fixes, completions
 [xflags](https://github.com/matklad/xflags)          | `macro_rules!` |
 

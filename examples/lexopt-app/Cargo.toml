@@ -1,0 +1,11 @@
+[package]
+name = "lexopt-app"
+version = "0.1.0"
+edition = "2018"
+
+[[bin]]
+name = "app"
+path = "app.rs"
+
+[dependencies]
+lexopt = "0.1"
