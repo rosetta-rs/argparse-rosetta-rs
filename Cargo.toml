@@ -6,4 +6,5 @@ members = [
     "examples/null-app",
     "examples/pico-args-app",
     "examples/structopt-app",
+    "examples/xflags-app",
 ]

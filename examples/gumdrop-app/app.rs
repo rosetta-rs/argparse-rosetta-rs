@@ -11,7 +11,12 @@ struct AppArgs {
     #[options(no_short, help = "Sets an optional number")]
     opt_number: Option<u32>,
 
-    #[options(no_short, help = "Sets width", default = "10", parse(try_from_str = "parse_width"))]
+    #[options(
+        no_short,
+        help = "Sets width",
+        default = "10",
+        parse(try_from_str = "parse_width")
+    )]
     width: u32,
 
     #[options(free, help = "Input file")]
