@@ -1,4 +1,4 @@
-use clap::{Arg, App, value_t};
+use clap::{value_t, App, Arg};
 
 #[derive(Debug)]
 struct AppArgs {
@@ -20,23 +20,28 @@ fn is_width(s: String) -> Result<(), String> {
 
 fn main() {
     let matches = App::new("App")
-        .arg(Arg::with_name("number")
-            .long("number")
-            .required(true)
-            .help("Sets a number")
-            .takes_value(true))
-        .arg(Arg::with_name("opt-number")
-            .long("opt-number")
-            .help("Sets an optional number")
-            .takes_value(true))
-        .arg(Arg::with_name("width")
-            .long("width")
-            .default_value("10")
-            .validator(is_width)
-            .help("Sets width")
-            .takes_value(true))
-        .arg(Arg::with_name("INPUT")
-            .index(1))
+        .arg(
+            Arg::with_name("number")
+                .long("number")
+                .required(true)
+                .help("Sets a number")
+                .takes_value(true),
+        )
+        .arg(
+            Arg::with_name("opt-number")
+                .long("opt-number")
+                .help("Sets an optional number")
+                .takes_value(true),
+        )
+        .arg(
+            Arg::with_name("width")
+                .long("width")
+                .default_value("10")
+                .validator(is_width)
+                .help("Sets width")
+                .takes_value(true),
+        )
+        .arg(Arg::with_name("INPUT").index(1))
         .get_matches();
 
     let args = AppArgs {

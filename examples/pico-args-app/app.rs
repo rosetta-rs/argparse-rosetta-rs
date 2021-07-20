@@ -56,7 +56,9 @@ fn parse_args() -> Result<AppArgs, pico_args::Error> {
     let args = AppArgs {
         number: pargs.value_from_str("--number")?,
         opt_number: pargs.opt_value_from_str("--opt-number")?,
-        width: pargs.opt_value_from_fn("--width", parse_width)?.unwrap_or(10),
+        width: pargs
+            .opt_value_from_fn("--width", parse_width)?
+            .unwrap_or(10),
         input: pargs.free_from_str()?,
     };
 
