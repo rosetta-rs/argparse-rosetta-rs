@@ -5,7 +5,7 @@ authors = ["Evgeniy Reizner <razrfalcon@gmail.com>"]
 edition = "2018"
 
 [[bin]]
-name = "app"
+name = "gumdrop-app"
 path = "app.rs"
 
 [dependencies]

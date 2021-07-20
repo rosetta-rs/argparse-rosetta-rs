@@ -1,0 +1,273 @@
+{
+  "timestamp": "2021-07-21",
+  "hostname": "epage-sc01",
+  "os": "Linux",
+  "os_ver": "4.4.0-19041-Microsoft",
+  "arch": "x86_64",
+  "libs": {
+    "examples/argh-app/Cargo.toml": {
+      "manifest_path": "examples/argh-app/Cargo.toml",
+      "name": "argh",
+      "version": "v0.1.5",
+      "deps": 8,
+      "build": {
+        "results": [
+          {
+            "command": "cargo build --bin argh-app",
+            "mean": 12.511691345,
+            "stddev": 0.2861759169799274,
+            "median": 12.596277395000001,
+            "user": 20.788828125000002,
+            "system": 6.3303906250000015,
+            "min": 11.816119945,
+            "max": 12.780607745000001,
+            "times": [
+              11.816119945,
+              12.334456845,
+              12.480930645,
+              12.402246045,
+              12.547202945,
+              12.648536745000001,
+              12.645351845,
+              12.693389345,
+              12.780607745000001,
+              12.768071345000001
+            ]
+          }
+        ]
+      },
+      "size": 3304096
+    },
+    "examples/clap-app/Cargo.toml": {
+      "manifest_path": "examples/clap-app/Cargo.toml",
+      "name": "clap",
+      "version": "v2.33.3",
+      "deps": 8,
+      "build": {
+        "results": [
+          {
+            "command": "cargo build --bin clap-app",
+            "mean": 9.327739419499999,
+            "stddev": 0.18964295482330326,
+            "median": 9.3163356995,
+            "user": 16.641874999999995,
+            "system": 5.383203124999999,
+            "min": 9.0827649495,
+            "max": 9.6193730495,
+            "times": [
+              9.6193730495,
+              9.545349849499999,
+              9.5192062495,
+              9.2697890495,
+              9.2523113495,
+              9.0827649495,
+              9.1063386495,
+              9.3737966495,
+              9.1455820495,
+              9.3628823495
+            ]
+          }
+        ]
+      },
+      "size": 3915648
+    },
+    "examples/gumdrop-app/Cargo.toml": {
+      "manifest_path": "examples/gumdrop-app/Cargo.toml",
+      "name": "gumdrop",
+      "version": "v0.8.0",
+      "deps": 5,
+      "build": {
+        "results": [
+          {
+            "command": "cargo build --bin gumdrop-app",
+            "mean": 12.564484935000001,
+            "stddev": 0.09998527693238347,
+            "median": 12.578195745,
+            "user": 19.188984374999997,
+            "system": 5.175781249999999,
+            "min": 12.384011345000001,
+            "max": 12.701843045,
+            "times": [
+              12.491206245,
+              12.643965345,
+              12.663114845,
+              12.631084345,
+              12.586118845,
+              12.384011345000001,
+              12.701843045,
+              12.570272645000001,
+              12.481290345,
+              12.491942345
+            ]
+          }
+        ]
+      },
+      "size": 3298032
+    },
+    "examples/lexopt-app/Cargo.toml": {
+      "manifest_path": "examples/lexopt-app/Cargo.toml",
+      "name": "lexopt",
+      "version": "v0.1.0",
+      "deps": 0,
+      "build": {
+        "results": [
+          {
+            "command": "cargo build --bin lexopt-app",
+            "mean": 1.932094554,
+            "stddev": 0.049988718921310425,
+            "median": 1.9275625440000002,
+            "user": 1.15609375,
+            "system": 0.9077343750000001,
+            "min": 1.8664709940000002,
+            "max": 1.9991279940000002,
+            "times": [
+              1.9549177940000002,
+              1.9165049940000003,
+              1.911066994,
+              1.938620094,
+              1.8664709940000002,
+              1.9991279940000002,
+              1.881982894,
+              1.9828366940000002,
+              1.874121294,
+              1.995295794
+            ]
+          }
+        ]
+      },
+      "size": 3295768
+    },
+    "examples/null-app/Cargo.toml": {
+      "manifest_path": "examples/null-app/Cargo.toml",
+      "name": null,
+      "version": null,
+      "deps": 0,
+      "build": {
+        "results": [
+          {
+            "command": "cargo build --bin null-app",
+            "mean": 1.188293738,
+            "stddev": 0.04735200801371222,
+            "median": 1.173452668,
+            "user": 0.5982812500000001,
+            "system": 0.5817187499999998,
+            "min": 1.133092618,
+            "max": 1.2733808180000001,
+            "times": [
+              1.1597761180000001,
+              1.187192518,
+              1.271299118,
+              1.170825518,
+              1.151768018,
+              1.191042618,
+              1.176079818,
+              1.168480218,
+              1.133092618,
+              1.2733808180000001
+            ]
+          }
+        ]
+      },
+      "size": 3258728
+    },
+    "examples/pico-args-app/Cargo.toml": {
+      "manifest_path": "examples/pico-args-app/Cargo.toml",
+      "name": "pico-args",
+      "version": "v0.4.2",
+      "deps": 0,
+      "build": {
+        "results": [
+          {
+            "command": "cargo build --bin pico-args-app",
+            "mean": 1.991036621,
+            "stddev": 0.03262142146900973,
+            "median": 1.9877692310000001,
+            "user": 1.237265625,
+            "system": 0.894140625,
+            "min": 1.933491231,
+            "max": 2.0473196309999997,
+            "times": [
+              1.966289331,
+              2.0473196309999997,
+              2.0039966309999997,
+              2.027579231,
+              1.981351231,
+              1.970789831,
+              1.994187231,
+              1.977460231,
+              2.0079016309999997,
+              1.933491231
+            ]
+          }
+        ]
+      },
+      "size": 3288360
+    },
+    "examples/structopt-app/Cargo.toml": {
+      "manifest_path": "examples/structopt-app/Cargo.toml",
+      "name": "structopt",
+      "version": "v0.3.22",
+      "deps": 20,
+      "build": {
+        "results": [
+          {
+            "command": "cargo build --bin structopt-app",
+            "mean": 19.231209551,
+            "stddev": 0.1922975565412325,
+            "median": 19.175581471,
+            "user": 55.063828125,
+            "system": 17.083359374999997,
+            "min": 18.968308171,
+            "max": 19.575797471,
+            "times": [
+              19.341734471,
+              19.376071571,
+              19.423619771,
+              19.575797471,
+              19.198459371,
+              19.117623871,
+              19.014920171,
+              19.152703571,
+              19.142857070999998,
+              18.968308171
+            ]
+          }
+        ]
+      },
+      "size": 3916440
+    },
+    "examples/xflags-app/Cargo.toml": {
+      "manifest_path": "examples/xflags-app/Cargo.toml",
+      "name": "xflags",
+      "version": "v0.2.2",
+      "deps": 3,
+      "build": {
+        "results": [
+          {
+            "command": "cargo build --bin xflags-app",
+            "mean": 5.604804328500001,
+            "stddev": 0.07383845424403794,
+            "median": 5.5727262785,
+            "user": 5.088671874999999,
+            "system": 2.6413281250000002,
+            "min": 5.5256681285,
+            "max": 5.7036332285,
+            "times": [
+              5.5917896285,
+              5.551675228500001,
+              5.652204628500001,
+              5.6979196285,
+              5.5256681285,
+              5.7036332285,
+              5.5536629285000005,
+              5.547425828500001,
+              5.6930191285000005,
+              5.5310449285
+            ]
+          }
+        ]
+      },
+      "size": 3288872
+    }
+  }
+}
