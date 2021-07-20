@@ -1,0 +1,11 @@
+[package]
+name = "xflags-app"
+version = "0.1.0"
+edition = "2018"
+
+[[bin]]
+name = "app"
+path = "app.rs"
+
+[dependencies]
+xflags = "0.2"
