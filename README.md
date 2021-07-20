@@ -16,3 +16,9 @@ No-op                                                | N/A            | N/A
 [xflags](https://github.com/matklad/xflags)          | `macro_rules!` |
 
 **For a full comparison, see each parser docs**
+
+## Special Thanks
+
+- RazrFalcon for creating the [initial benchmarks](https://github.com/RazrFalcon/pico-args)
+- djc for inspiration with [template-benchmarks-rs](https://github.com/djc/template-benchmarks-rs)
+- sharkdp for [hyperfine](https://github.com/sharkdp/hyperfine)
