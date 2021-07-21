@@ -15,13 +15,13 @@ def main():
     args = parser.parse_args()
 
     data = json.loads(args.run.read_text())
-    cases = sorted(data["libs"].values(), key=lambda c: (c["name"] if c["name"] else "", c["version"]))
+    cases = sorted(data["libs"].values(), key=lambda c: (c["crate"] if c["crate"] else "", c["name"]))
 
-    print("Crate | Overhead (release) | Build (debug) | Deps | Version")
-    print("------|--------------------|---------------|------|--------")
+    print("Name | Overhead (release) | Build (debug) | Deps | Version")
+    print("-----|--------------------|---------------|------|--------")
     for case in cases:
         row = [
-            case["name"] if case["name"] else "null",
+            case["name"],
             fmt_size(case, cases[0]),
             fmt_time(case),
             str(case["deps"]),
