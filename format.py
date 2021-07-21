@@ -17,19 +17,24 @@ def main():
     data = json.loads(args.run.read_text())
     cases = sorted(data["libs"].values(), key=lambda c: (c["name"] if c["name"] else "", c["version"]))
 
-    print(" | ".join(["Crate"] + [case["name"] if case["name"] else "null" for case in cases]))
-    print("-|-".join(["-"] + ["-" for case in cases]))
-    print(" | ".join(["Binary Overhead (release)"] + [str(fmt_size(case, cases[0])) for case in cases]))
-    print(" | ".join(["Build Time (debug)"] + [str(fmt_time(case)) for case in cases]))
-    print(" | ".join(["Dependencies"] + [str(case["deps"]) for case in cases]))
-    print(" | ".join(["Version"] + [case["version"] if case["version"] else "-" for case in cases]))
+    print("Crate | Overhead (release) | Build (debug) | Deps | Version")
+    print("------|--------------------|---------------|------|--------")
+    for case in cases:
+        row = [
+            case["name"] if case["name"] else "null",
+            fmt_size(case, cases[0]),
+            fmt_time(case),
+            str(case["deps"]),
+            case["version"] if case["version"] else "-",
+        ]
+        print(" | ".join(row))
     print()
     print(f"**System: {data['os']} {data['os_ver']} ({data['arch']})**")
 
 
 def fmt_time(case):
     value = case["build"]["results"][0]["median"]
-    return "{:.1f}".format(value)
+    return "{:.1f}s".format(value)
 
 
 def fmt_size(case, null_case):

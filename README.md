@@ -19,12 +19,16 @@ No-op                                                | N/A            | N/A
 
 # Results
 
-Crate | null | argh | clap | gumdrop | lexopt | pico-args | structopt | xflags
---|---|---|---|---|---|---|---|--
-Binary Overhead (release) | 0.0 KiB | 44.3 KiB | 641.5 KiB | 38.4 KiB | 36.2 KiB | 28.9 KiB | 642.3 KiB | 29.4 KiB
-Build Time (debug) | 1.2 | 12.6 | 9.3 | 12.6 | 1.9 | 2.0 | 19.2 | 5.6
-Dependencies | 0 | 8 | 8 | 5 | 0 | 0 | 20 | 3
-Version | - | v0.1.5 | v2.33.3 | v0.8.0 | v0.1.0 | v0.4.2 | v0.3.22 | v0.2.2
+Crate | Overhead (release) | Build (debug) | Deps | Version
+------|--------------------|---------------|------|--------
+null | 0.0 KiB | 1.2s | 0 | -
+argh | 44.3 KiB | 12.6s | 8 | v0.1.5
+clap | 641.5 KiB | 9.3s | 8 | v2.33.3
+gumdrop | 38.4 KiB | 12.6s | 5 | v0.8.0
+lexopt | 36.2 KiB | 1.9s | 0 | v0.1.0
+pico-args | 28.9 KiB | 2.0s | 0 | v0.4.2
+structopt | 642.3 KiB | 19.2s | 20 | v0.3.22
+xflags | 29.4 KiB | 5.6s | 3 | v0.2.2
 
 **System: Linux 4.4.0-19041-Microsoft (x86_64)**
 
