@@ -18,18 +18,29 @@ def main():
     uname = platform.uname()
     cpus = multiprocessing.cpu_count()
 
+    runs_root = repo_root / "runs"
+    runs_root.mkdir(parents=True, exist_ok=True)
+    raw_run_path = runs_root / "{}-{}.json".format(timestamp, hostname)
+    if raw_run_path.exists():
+        old_raw_run = json.loads(raw_run_path.read_text())
+    else:
+        old_raw_run = {}
+
     raw_run = {
         "timestamp": timestamp,
         "hostname": hostname,
         "os": uname.system,
         "os_ver": uname.release,
         "arch": uname.machine,
-        "cpus", cpus,
+        "cpus": cpus,
         "libs": {},
     }
 
     with tempfile.TemporaryDirectory() as tmpdir:
         for example_path in sorted((repo_root / "examples").glob("*-app")):
+            manifest_path = example_path / "Cargo.toml"
+            metadata = harvest_metadata(manifest_path)
+
             build_report_path = pathlib.Path(tmpdir) / f"{example_path.name}.json"
             if True:
                 subprocess.run(
@@ -48,15 +59,15 @@ def main():
                 )
                 build_report = json.loads(build_report_path.read_text())
             else:
-                build_report = None
+                build_report = old_raw_run.get("libs", {}).get(str(manifest_path), {}).get("build", None)
 
-            manifest_path = example_path / "Cargo.toml"
-            metadata = harvest_metadata(manifest_path)
-
-            # Doing release builds because that is where size probably matters most
-            subprocess.run(["cargo", "build", "--release", "--package", example_path.name], cwd=repo_root, check=True)
-            app_path = repo_root / f"target/release/{example_path.name}"
-            file_size = app_path.stat().st_size
+            if True:
+                # Doing release builds because that is where size probably matters most
+                subprocess.run(["cargo", "build", "--release", "--package", example_path.name], cwd=repo_root, check=True)
+                app_path = repo_root / f"target/release/{example_path.name}"
+                file_size = app_path.stat().st_size
+            else:
+                file_size = old_raw_run.get("libs", {}).get(str(manifest_path), {}).get("size", None)
 
             raw_run["libs"][str(manifest_path)] = {
                 "name": example_path.name.rsplit("-", 1)[0],
@@ -68,9 +79,6 @@ def main():
                 "size": file_size,
             }
 
-    runs_root = repo_root / "runs"
-    runs_root.mkdir(parents=True, exist_ok=True)
-    raw_run_path = runs_root / "{}-{}.json".format(timestamp, hostname)
     raw_run_path.write_text(json.dumps(raw_run, indent=2))
     print(raw_run_path)
 
