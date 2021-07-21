@@ -55,8 +55,9 @@ def main():
             file_size = app_path.stat().st_size
 
             raw_run["libs"][str(manifest_path)] = {
+                "name": example_path.name.rsplit("-", 1)[0],
                 "manifest_path": str(manifest_path),
-                "name": metadata["name"],
+                "crate": metadata["name"],
                 "version": metadata["version"],
                 "deps": metadata["deps"],
                 "build": build_report,
