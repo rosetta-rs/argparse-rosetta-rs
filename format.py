@@ -29,17 +29,17 @@ def main():
         ]
         print(" | ".join(row))
     print()
-    print(f"**System: {data['os']} {data['os_ver']} ({data['arch']})**")
+    print(f"*System: {data['os']} {data['os_ver']} ({data['arch']})*")
 
 
 def fmt_time(case):
     value = case["build"]["results"][0]["median"]
-    return "{:.1f}s".format(value)
+    return "{:.0f}s".format(value)
 
 
 def fmt_size(case, null_case):
     delta = (case["size"] - null_case["size"]) / 1024
-    return "{:,.1f} KiB".format(delta)
+    return "{:,.0f} KiB".format(delta)
 
 
 if __name__ == "__main__":
