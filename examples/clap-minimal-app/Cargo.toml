@@ -1,0 +1,12 @@
+[package]
+name = "clap-minimal-app"
+version = "0.1.0"
+authors = ["Evgeniy Reizner <razrfalcon@gmail.com>"]
+edition = "2018"
+
+[[bin]]
+name = "clap-minimal-app"
+path = "app.rs"
+
+[dependencies]
+clap = { version = "3.0.0-beta.2", default-features = false, features = ["std"] }
