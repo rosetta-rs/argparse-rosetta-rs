@@ -35,7 +35,7 @@ pico-args | 29 KiB | 2s | 0 | v0.4.2
 structopt | 642 KiB | 23s | 20 | v0.3.22
 xflags | 29 KiB | 6s | 3 | v0.2.2
 
-*System: Linux 4.4.0-19041-Microsoft (x86_64)*
+*System: Linux 4.4.0-19041-Microsoft (x86_64) w/ `-j 8`*
 
 # Running the Benchmarks
 

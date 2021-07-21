@@ -29,7 +29,7 @@ def main():
         ]
         print(" | ".join(row))
     print()
-    print(f"*System: {data['os']} {data['os_ver']} ({data['arch']})*")
+    print(f"*System: {data['os']} {data['os_ver']} ({data['arch']}) w/ `-j {data['cpus']}`*")
 
 
 def fmt_time(case):

@@ -3,6 +3,7 @@
 import copy
 import datetime
 import json
+import multiprocessing
 import pathlib
 import platform
 import subprocess
@@ -15,6 +16,7 @@ def main():
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d")
     hostname = platform.node()
     uname = platform.uname()
+    cpus = multiprocessing.cpu_count()
 
     raw_run = {
         "timestamp": timestamp,
@@ -22,6 +24,7 @@ def main():
         "os": uname.system,
         "os_ver": uname.release,
         "arch": uname.machine,
+        "cpus", cpus,
         "libs": {},
     }
 
@@ -38,7 +41,7 @@ def main():
                         "--prepare=cargo clean",
                         # Doing debug builds because that is more likely the
                         # time directly impacting people
-                        f"cargo build --package {example_path.name}"
+                        f"cargo build -j {cpus} --package {example_path.name}"
                     ],
                     cwd=repo_root,
                     check=True,

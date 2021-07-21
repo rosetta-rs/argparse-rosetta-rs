@@ -4,6 +4,7 @@
   "os": "Linux",
   "os_ver": "4.4.0-19041-Microsoft",
   "arch": "x86_64",
+  "cpus": "8",
   "libs": {
     "examples/argh-app/Cargo.toml": {
       "name": "argh",
