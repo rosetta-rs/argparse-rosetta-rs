@@ -440,9 +440,9 @@ checksum = "712e227841d057c1ee1cd2fb22fa7e5a5461ae8e48fa2ca79ec42cfc1931183f"
 
 [[package]]
 name = "xflags"
-version = "0.2.2"
+version = "0.2.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a25b85ca0fcf2d003f2b0cfdce73897c54ec3d793dfe008a64de5040209363c9"
+checksum = "2c2854f07e689d7388420d1c73512073630df31ec5ddf18554f64aea0ae73775"
 dependencies = [
  "xflags-macros",
 ]
@@ -456,9 +456,6 @@ dependencies = [
 
 [[package]]
 name = "xflags-macros"
-version = "0.2.2"
+version = "0.2.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "00055208d8839f11689012fecb42bbc024e25bf3af91b3b9879739d3cda65bf0"
-dependencies = [
- "proc-macro2",
-]
+checksum = "da260301476ad19a4733a0e930db8227a48ea04561e235a5102978145ec69fcc"
