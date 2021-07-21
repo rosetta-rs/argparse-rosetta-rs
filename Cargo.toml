@@ -2,6 +2,7 @@
 members = [
     "examples/argh-app",
     "examples/clap-app",
+    "examples/clap3-app",
     "examples/gumdrop-app",
     "examples/lexopt-app",
     "examples/null-app",
