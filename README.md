@@ -24,15 +24,15 @@ docs*
 Name | Overhead (release) | Build (debug) | Deps | Version
 -----|--------------------|---------------|------|--------
 null | 0 KiB | 1s | 0 | -
-argh | 44 KiB | 15s | 8 | v0.1.5
+argh | 44 KiB | 13s | 8 | v0.1.5
 clap | 642 KiB | 11s | 8 | v2.33.3
-clap-minimal | 589 KiB | 26s | 8 | v3.0.0-beta.2
-clap3 | 588 KiB | 26s | 23 | v3.0.0-beta.2
-clap_derive | 588 KiB | 26s | 23 | v3.0.0-beta.2
-gumdrop | 38 KiB | 14s | 5 | v0.8.0
+clap-minimal | 542 KiB | 11s | 8 | v3.0.0-beta.2
+clap3 | 588 KiB | 27s | 23 | v3.0.0-beta.2
+clap_derive | 588 KiB | 27s | 23 | v3.0.0-beta.2
+gumdrop | 38 KiB | 11s | 5 | v0.8.0
 lexopt | 36 KiB | 2s | 0 | v0.1.0
 pico-args | 29 KiB | 2s | 0 | v0.4.2
-structopt | 642 KiB | 22s | 20 | v0.3.22
+structopt | 642 KiB | 23s | 20 | v0.3.22
 xflags | 29 KiB | 6s | 3 | v0.2.2
 
 *System: Linux 4.4.0-19041-Microsoft (x86_64)*

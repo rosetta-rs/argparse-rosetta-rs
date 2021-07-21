@@ -38,7 +38,7 @@ def main():
                         "--prepare=cargo clean",
                         # Doing debug builds because that is more likely the
                         # time directly impacting people
-                        f"cargo build --bin {example_path.name}"
+                        f"cargo build --package {example_path.name}"
                     ],
                     cwd=repo_root,
                     check=True,
@@ -51,7 +51,7 @@ def main():
             metadata = harvest_metadata(manifest_path)
 
             # Doing release builds because that is where size probably matters most
-            subprocess.run(["cargo", "build", "--release", "--bin", example_path.name], cwd=repo_root, check=True)
+            subprocess.run(["cargo", "build", "--release", "--package", example_path.name], cwd=repo_root, check=True)
             app_path = repo_root / f"target/release/{example_path.name}"
             file_size = app_path.stat().st_size
 
