@@ -33,6 +33,7 @@ def main():
                     [
                         "hyperfine",
                         "--warmup=1",
+                        "--min-runs=5",
                         f"--export-json={build_report_path}",
                         "--prepare=cargo clean",
                         # Doing debug builds because that is more likely the
