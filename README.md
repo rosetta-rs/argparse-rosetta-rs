@@ -15,7 +15,9 @@ No-op                                                | N/A            | N/A
 [structopt](https://github.com/texitoi/structopt)    | `derive`       | Color, suggested fixes, completions
 [xflags](https://github.com/matklad/xflags)          | proc-macro     |
 
-*For a full comparison, see each parser docs*
+*Note: any non-performanve comparison is meant to provide context for what you
+gain/lose with each crate's overhead.  For a full comparison, see each parser
+docs*
 
 # Results
 
