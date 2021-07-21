@@ -43,17 +43,20 @@ def main():
 
             build_report_path = pathlib.Path(tmpdir) / f"{example_path.name}.json"
             if True:
+                hyperfine_cmd = [
+                    "hyperfine",
+                    "--warmup=1",
+                    "--min-runs=5",
+                    f"--export-json={build_report_path}",
+                    "--prepare=cargo clean",
+                    # Doing debug builds because that is more likely the
+                    # time directly impacting people
+                    f"cargo build -j {cpus} --package {example_path.name}"
+                ]
+                if False:
+                    hyperfine_cmd.append("--show-output")
                 subprocess.run(
-                    [
-                        "hyperfine",
-                        "--warmup=1",
-                        "--min-runs=5",
-                        f"--export-json={build_report_path}",
-                        "--prepare=cargo clean",
-                        # Doing debug builds because that is more likely the
-                        # time directly impacting people
-                        f"cargo build -j {cpus} --package {example_path.name}"
-                    ],
+                    hyperfine_cmd,
                     cwd=repo_root,
                     check=True,
                 )
