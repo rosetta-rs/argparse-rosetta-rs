@@ -13,7 +13,7 @@ No-op                                                | N/A            | N/A
 [lexopt](https://github.com/murarth/gumdrop)         | Imperative     | No help generation
 [pico-args](https://github.com/razrfalcon/pico-args) | Imperative     | No help generation
 [structopt](https://github.com/texitoi/structopt)    | `derive`       | Color, suggested fixes, completions
-[xflags](https://github.com/matklad/xflags)          | `macro_rules!` |
+[xflags](https://github.com/matklad/xflags)          | proc-macro     |
 
 **For a full comparison, see each parser docs**
 
