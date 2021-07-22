@@ -71,7 +71,7 @@ fn parse_args() -> Result<AppArgs, pico_args::Error> {
     };
 
     while let Some(value) = pargs.opt_free_from_os_str(parse_path)? {
-        args.input.push(value.into());
+        args.input.push(value);
     }
 
     Ok(args)
