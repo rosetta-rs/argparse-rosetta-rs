@@ -41,7 +41,7 @@ fn main() {
                 .help("Sets width")
                 .takes_value(true),
         )
-        .arg(Arg::with_name("INPUT").index(1))
+        .arg(Arg::with_name("INPUT").takes_value(true).multiple(true))
         .get_matches();
 
     let args = AppArgs {
@@ -56,5 +56,9 @@ fn main() {
             .collect(),
     };
 
-    println!("{:#?}", args);
+    if 10 < args.input.len() {
+        println!("{:#?}", args.input.len());
+    } else {
+        println!("{:#?}", args);
+    }
 }

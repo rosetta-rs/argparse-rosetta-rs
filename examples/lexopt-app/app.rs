@@ -35,7 +35,11 @@ fn main() {
             std::process::exit(1);
         }
     };
-    println!("{:#?}", args);
+    if 10 < args.input.len() {
+        println!("{:#?}", args.input.len());
+    } else {
+        println!("{:#?}", args);
+    }
 }
 
 fn parse_args() -> Result<AppArgs, lexopt::Error> {

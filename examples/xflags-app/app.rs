@@ -79,5 +79,9 @@ fn main() {
             std::process::exit(2);
         }
     }
-    println!("{:#?}", args);
+    if 10 < args.input.len() {
+        println!("{:#?}", args.input.len());
+    } else {
+        println!("{:#?}", args);
+    }
 }

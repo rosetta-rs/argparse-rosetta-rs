@@ -21,19 +21,19 @@ docs*
 
 # Results
 
-Name | Overhead (release) | Build (debug) | Deps | Version
------|--------------------|---------------|------|--------
-null | 0 KiB | 1s | 0 | -
-argh | 44 KiB | 11s | 8 | v0.1.5
-clap | 642 KiB | 10s | 8 | v2.33.3
-clap-minimal | 542 KiB | 10s | 8 | v3.0.0-beta.2
-clap3 | 588 KiB | 23s | 23 | v3.0.0-beta.2
-clap_derive | 588 KiB | 23s | 23 | v3.0.0-beta.2
-gumdrop | 38 KiB | 10s | 5 | v0.8.0
-lexopt | 36 KiB | 2s | 0 | v0.1.0
-pico-args | 29 KiB | 2s | 0 | v0.4.2
-structopt | 642 KiB | 20s | 20 | v0.3.22
-xflags | 29 KiB | 3s | 1 | v0.2.3
+Name | Overhead (release) | Build (debug) | Parse (release) | Deps | Invalid UTF-8 | Version
+-----|--------------------|---------------|-----------------|------|---------------|--------
+null | 0 KiB | 1s | 11ms | 0 | Y | -
+argh | 42 KiB | 11s | 11ms | 8 | N | v0.1.5
+clap | 645 KiB | 10s | 12ms | 8 | Y | v2.33.3
+clap-minimal | 540 KiB | 10s | 11ms | 8 | Y | v3.0.0-beta.2
+clap3 | 591 KiB | 23s | 10ms | 23 | Y | v3.0.0-beta.2
+clap_derive | 587 KiB | 23s | 11ms | 23 | Y | v3.0.0-beta.2
+gumdrop | 36 KiB | 10s | 10ms | 5 | N | v0.8.0
+lexopt | 38 KiB | 2s | 10ms | 0 | Y | v0.1.0
+pico-args | 31 KiB | 2s | 10ms | 0 | Y | v0.4.2
+structopt | 645 KiB | 20s | 11ms | 20 | Y | v0.3.22
+xflags | 27 KiB | 3s | 10ms | 1 | Y | v0.2.3
 
 *System: Linux 4.4.0-19041-Microsoft (x86_64) w/ `-j 8`*
 

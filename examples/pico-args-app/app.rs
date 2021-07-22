@@ -46,7 +46,11 @@ fn main() {
         }
     };
 
-    println!("{:#?}", args);
+    if 10 < args.input.len() {
+        println!("{:#?}", args.input.len());
+    } else {
+        println!("{:#?}", args);
+    }
 }
 
 fn parse_args() -> Result<AppArgs, pico_args::Error> {
