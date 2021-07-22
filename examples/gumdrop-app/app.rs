@@ -20,7 +20,7 @@ struct AppArgs {
     width: u32,
 
     #[options(free, help = "Input file")]
-    input: std::path::PathBuf,
+    input: Vec<std::path::PathBuf>,
 }
 
 fn parse_width(s: &str) -> Result<u32, String> {

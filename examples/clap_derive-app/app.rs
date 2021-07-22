@@ -15,7 +15,7 @@ struct AppArgs {
     width: u32,
 
     #[clap(parse(from_os_str))]
-    input: std::path::PathBuf,
+    input: Vec<std::path::PathBuf>,
 }
 
 fn parse_width(s: &str) -> Result<u32, String> {

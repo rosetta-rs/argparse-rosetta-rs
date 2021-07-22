@@ -6,7 +6,7 @@ mod flags {
         src "./app.rs"
 
         cmd app
-            required input: PathBuf
+            repeated input: PathBuf
         {
             optional --help
             /// Sets a number
@@ -23,7 +23,7 @@ mod flags {
     // Run `env UPDATE_XFLAGS=1 cargo build` to regenerate.
     #[derive(Debug)]
     pub struct App {
-        pub input: PathBuf,
+        pub input: Vec<PathBuf>,
 
         pub help: bool,
         pub number: u32,

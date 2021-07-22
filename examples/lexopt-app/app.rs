@@ -1,5 +1,5 @@
 const HELP: &str = "\
-USAGE: app [OPTIONS] --number NUMBER INPUT
+USAGE: app [OPTIONS] --number NUMBER INPUT..
 
 OPTIONS:
   --number NUMBER       Set a number (required)
@@ -15,7 +15,7 @@ struct AppArgs {
     number: u32,
     opt_number: Option<u32>,
     width: u32,
-    input: std::path::PathBuf,
+    input: Vec<std::path::PathBuf>,
 }
 
 fn parse_width(s: &str) -> Result<u32, String> {
@@ -44,7 +44,7 @@ fn parse_args() -> Result<AppArgs, lexopt::Error> {
     let mut number = None;
     let mut opt_number = None;
     let mut width = 10;
-    let mut input = None;
+    let mut input = Vec::new();
 
     let mut parser = lexopt::Parser::from_env();
     while let Some(arg) = parser.next()? {
@@ -56,7 +56,7 @@ fn parse_args() -> Result<AppArgs, lexopt::Error> {
             Long("number") => number = Some(parser.value()?.parse()?),
             Long("opt-number") => opt_number = Some(parser.value()?.parse()?),
             Long("width") => width = parser.value()?.parse_with(parse_width)?,
-            Value(path) if input.is_none() => input = Some(path.into()),
+            Value(path) => input.push(path.into()),
             _ => return Err(arg.unexpected()),
         }
     }
@@ -64,6 +64,6 @@ fn parse_args() -> Result<AppArgs, lexopt::Error> {
         number: number.ok_or("missing required option --number")?,
         opt_number,
         width,
-        input: input.ok_or("missing required argument INPUT")?,
+        input,
     })
 }
