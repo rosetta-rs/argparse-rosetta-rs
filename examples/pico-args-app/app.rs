@@ -2,7 +2,7 @@ const HELP: &str = "\
 App
 
 USAGE:
-  app [OPTIONS] --number NUMBER [INPUT]
+  app [OPTIONS] --number NUMBER [INPUT]..
 
 FLAGS:
   -h, --help            Prints help information
@@ -21,7 +21,7 @@ struct AppArgs {
     number: u32,
     opt_number: Option<u32>,
     width: u32,
-    input: std::path::PathBuf,
+    input: Vec<std::path::PathBuf>,
 }
 
 fn parse_width(s: &str) -> Result<u32, String> {
@@ -33,6 +33,10 @@ fn parse_width(s: &str) -> Result<u32, String> {
     }
 }
 
+fn parse_path(s: &std::ffi::OsStr) -> Result<std::path::PathBuf, pico_args::Error> {
+    Ok(std::path::PathBuf::from(s))
+}
+
 fn main() {
     let args = match parse_args() {
         Ok(v) => v,
@@ -42,7 +46,11 @@ fn main() {
         }
     };
 
-    println!("{:#?}", args);
+    if 10 < args.input.len() {
+        println!("{:#?}", args.input.len());
+    } else {
+        println!("{:#?}", args);
+    }
 }
 
 fn parse_args() -> Result<AppArgs, pico_args::Error> {
@@ -53,14 +61,18 @@ fn parse_args() -> Result<AppArgs, pico_args::Error> {
         std::process::exit(0);
     }
 
-    let args = AppArgs {
+    let mut args = AppArgs {
         number: pargs.value_from_str("--number")?,
         opt_number: pargs.opt_value_from_str("--opt-number")?,
         width: pargs
             .opt_value_from_fn("--width", parse_width)?
             .unwrap_or(10),
-        input: pargs.free_from_str()?,
+        input: Vec::new(),
     };
+
+    while let Some(value) = pargs.opt_free_from_os_str(parse_path)? {
+        args.input.push(value);
+    }
 
     Ok(args)
 }

@@ -6,7 +6,7 @@ struct AppArgs {
     number: u32,
     opt_number: Option<u32>,
     width: u32,
-    input: std::path::PathBuf,
+    input: Vec<std::path::PathBuf>,
 }
 
 fn is_width(s: &str) -> Result<(), String> {
@@ -41,7 +41,7 @@ fn main() {
                 .about("Sets width")
                 .takes_value(true),
         )
-        .arg(Arg::new("INPUT").index(1))
+        .arg(Arg::new("INPUT").takes_value(true).multiple(true))
         .get_matches();
 
     let args = AppArgs {
@@ -49,8 +49,16 @@ fn main() {
         number: matches.value_of_t("number").unwrap(),
         opt_number: matches.value_of_t("opt-number").ok(),
         width: matches.value_of_t("width").unwrap(),
-        input: matches.value_of("INPUT").unwrap().into(),
+        input: matches
+            .values_of_os("INPUT")
+            .unwrap()
+            .map(|s| s.into())
+            .collect(),
     };
 
-    println!("{:#?}", args);
+    if 10 < args.input.len() {
+        println!("{:#?}", args.input.len());
+    } else {
+        println!("{:#?}", args);
+    }
 }

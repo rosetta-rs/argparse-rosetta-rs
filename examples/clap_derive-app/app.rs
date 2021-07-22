@@ -15,7 +15,7 @@ struct AppArgs {
     width: u32,
 
     #[clap(parse(from_os_str))]
-    input: std::path::PathBuf,
+    input: Vec<std::path::PathBuf>,
 }
 
 fn parse_width(s: &str) -> Result<u32, String> {
@@ -29,5 +29,9 @@ fn parse_width(s: &str) -> Result<u32, String> {
 
 fn main() {
     let args = AppArgs::parse();
-    println!("{:#?}", args);
+    if 10 < args.input.len() {
+        println!("{:#?}", args.input.len());
+    } else {
+        println!("{:#?}", args);
+    }
 }
