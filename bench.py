@@ -42,7 +42,7 @@ def main():
             metadata = harvest_metadata(manifest_path)
 
             build_report_path = pathlib.Path(tmpdir) / f"{example_path.name}.json"
-            if True:
+            if False:
                 hyperfine_cmd = [
                     "hyperfine",
                     "--warmup=1",
@@ -64,13 +64,19 @@ def main():
             else:
                 build_report = old_raw_run.get("libs", {}).get(str(manifest_path), {}).get("build", None)
 
-            if True:
+            if False:
                 # Doing release builds because that is where size probably matters most
                 subprocess.run(["cargo", "build", "--release", "--package", example_path.name], cwd=repo_root, check=True)
                 app_path = repo_root / f"target/release/{example_path.name}"
                 file_size = app_path.stat().st_size
             else:
                 file_size = old_raw_run.get("libs", {}).get(str(manifest_path), {}).get("size", None)
+
+            p = subprocess.run(["cargo", "run", "--package", example_path.name, "--", "--number", "10", "path"], cwd=repo_root)
+            works = p.returncode == 0
+
+            p = subprocess.run(["cargo", "run", "--package", example_path.name, "--", "--number", "10", b"\xe9"], cwd=repo_root)
+            basic_osstr = p.returncode == 0
 
             raw_run["libs"][str(manifest_path)] = {
                 "name": example_path.name.rsplit("-", 1)[0],
@@ -80,6 +86,8 @@ def main():
                 "deps": metadata["deps"],
                 "build": build_report,
                 "size": file_size,
+                "works": works,
+                "osstr_basic": basic_osstr,
             }
 
     raw_run_path.write_text(json.dumps(raw_run, indent=2))
