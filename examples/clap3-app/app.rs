@@ -41,7 +41,7 @@ fn main() {
                 .about("Sets width")
                 .takes_value(true),
         )
-        .arg(Arg::new("INPUT").takes_value(true).multiple(true))
+        .arg(Arg::new("INPUT").takes_value(true).multiple_values(true))
         .get_matches();
 
     let args = AppArgs {
