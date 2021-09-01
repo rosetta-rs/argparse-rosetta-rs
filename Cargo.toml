@@ -1,14 +1,4 @@
 [workspace]
 members = [
-    "examples/argh-app",
-    "examples/clap-app",
-    "examples/clap3-app",
-    "examples/clap_derive-app",
-    "examples/clap-minimal-app",
-    "examples/gumdrop-app",
-    "examples/lexopt-app",
-    "examples/null-app",
-    "examples/pico-args-app",
-    "examples/structopt-app",
-    "examples/xflags-app",
+    "examples/*",
 ]
