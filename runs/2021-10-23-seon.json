@@ -10240,7 +10240,7 @@
       },
       "size": 4400352,
       "works": true,
-      "osstr_basic": false
+      "osstr_basic": true
     },
     "examples/clap_derive-app/Cargo.toml": {
       "name": "clap_derive",

@@ -27,7 +27,7 @@ null | 0 KiB | 735ms | 1ms | 0 | Y | ![Download count](https://img.shields.io/cr
 argh | 30 KiB | 6s | 1ms | 8 | N | ![Download count](https://img.shields.io/crates/dr/argh) | v0.1.6
 clap | 623 KiB | 6s | 2ms | 8 | Y | ![Download count](https://img.shields.io/crates/dr/clap) | v2.33.3
 clap-minimal | 614 KiB | 6s | 2ms | 7 | N | ![Download count](https://img.shields.io/crates/dr/clap) | v3.0.0-beta.5
-clap3 | 718 KiB | 15s | 1ms | 24 | N | ![Download count](https://img.shields.io/crates/dr/clap) | v3.0.0-beta.5
+clap3 | 718 KiB | 15s | 1ms | 24 | Y | ![Download count](https://img.shields.io/crates/dr/clap) | v3.0.0-beta.5
 clap_derive | 709 KiB | 15s | 2ms | 24 | Y | ![Download count](https://img.shields.io/crates/dr/clap) | v3.0.0-beta.5
 gumdrop | 24 KiB | 6s | 1ms | 5 | N | ![Download count](https://img.shields.io/crates/dr/gumdrop) | v0.8.0
 lexopt | 26 KiB | 1s | 1ms | 0 | Y | ![Download count](https://img.shields.io/crates/dr/lexopt) | v0.1.0

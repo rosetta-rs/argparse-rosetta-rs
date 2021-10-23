@@ -1,4 +1,4 @@
-use clap::{App, Arg};
+use clap::{App, Arg, ArgSettings};
 
 #[derive(Debug)]
 struct AppArgs {
@@ -41,7 +41,12 @@ fn main() {
                 .about("Sets width")
                 .takes_value(true),
         )
-        .arg(Arg::new("INPUT").takes_value(true).multiple_values(true))
+        .arg(
+            Arg::new("INPUT")
+                .takes_value(true)
+                .multiple_values(true)
+                .setting(ArgSettings::AllowInvalidUtf8),
+        )
         .get_matches();
 
     let args = AppArgs {
