@@ -27,7 +27,7 @@ def main():
             fmt_time(case, "xargs"),
             str(case["deps"]),
             "Y" if case["osstr_basic"] else "N",
-            "![Download count](https://img.shields.io/crates/dr/{})".format(case["name"]),
+            "![Download count](https://img.shields.io/crates/dr/{})".format(case["crate"]),
             case["version"] if case["version"] else "-",
         ]
         print(" | ".join(row))
