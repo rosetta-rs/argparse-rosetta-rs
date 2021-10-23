@@ -21,21 +21,21 @@ docs*
 
 # Results
 
-Name | Overhead (release) | Build (debug) | Parse (release) | Deps | Invalid UTF-8 | Version
------|--------------------|---------------|-----------------|------|---------------|--------
-null | 0 KiB | 1s | 11ms | 0 | Y | -
-argh | 42 KiB | 11s | 11ms | 8 | N | v0.1.5
-clap | 645 KiB | 10s | 12ms | 8 | Y | v2.33.3
-clap-minimal | 540 KiB | 10s | 11ms | 8 | Y | v3.0.0-beta.2
-clap3 | 591 KiB | 23s | 10ms | 23 | Y | v3.0.0-beta.2
-clap_derive | 587 KiB | 23s | 11ms | 23 | Y | v3.0.0-beta.2
-gumdrop | 36 KiB | 10s | 10ms | 5 | N | v0.8.0
-lexopt | 38 KiB | 2s | 10ms | 0 | Y | v0.1.0
-pico-args | 31 KiB | 2s | 10ms | 0 | Y | v0.4.2
-structopt | 645 KiB | 20s | 11ms | 20 | Y | v0.3.22
-xflags | 27 KiB | 3s | 10ms | 1 | Y | v0.2.3
+Name | Overhead (release) | Build (debug) | Parse (release) | Deps | Invalid UTF-8 | Downloads | Version
+-----|--------------------|---------------|-----------------|------|---------------|-----------|--------
+null | 0 KiB | 735ms | 1ms | 0 | Y | https://img.shields.io/crates/dr/null | -
+argh | 30 KiB | 6s | 1ms | 8 | N | https://img.shields.io/crates/dr/argh | v0.1.6
+clap | 623 KiB | 6s | 2ms | 8 | Y | https://img.shields.io/crates/dr/clap | v2.33.3
+clap-minimal | 614 KiB | 6s | 2ms | 7 | N | https://img.shields.io/crates/dr/clap-minimal | v3.0.0-beta.5
+clap3 | 718 KiB | 15s | 1ms | 24 | N | https://img.shields.io/crates/dr/clap3 | v3.0.0-beta.5
+clap_derive | 709 KiB | 15s | 2ms | 24 | Y | https://img.shields.io/crates/dr/clap_derive | v3.0.0-beta.5
+gumdrop | 24 KiB | 6s | 1ms | 5 | N | https://img.shields.io/crates/dr/gumdrop | v0.8.0
+lexopt | 26 KiB | 1s | 1ms | 0 | Y | https://img.shields.io/crates/dr/lexopt | v0.1.0
+pico-args | 23 KiB | 1s | 2ms | 0 | Y | https://img.shields.io/crates/dr/pico-args | v0.4.2
+structopt | 623 KiB | 11s | 2ms | 20 | Y | https://img.shields.io/crates/dr/structopt | v0.3.25
+xflags | 23 KiB | 2s | 1ms | 1 | Y | https://img.shields.io/crates/dr/xflags | v0.2.3
 
-*System: Linux 4.4.0-19041-Microsoft (x86_64) w/ `-j 8`*
+*System: Linux 5.4.0-84-generic (x86_64) w/ `-j 8`*
 
 Notes:
 - Overhead will be lower if your application shares dependencies with your argument parsing library.
