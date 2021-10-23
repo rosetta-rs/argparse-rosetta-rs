@@ -17,8 +17,8 @@ def main():
     data = json.loads(args.run.read_text())
     cases = sorted(data["libs"].values(), key=lambda c: (c["crate"] if c["crate"] else "", c["name"]))
 
-    print("Name | Overhead (release) | Build (debug) | Parse (release) | Deps | Invalid UTF-8 | Version")
-    print("-----|--------------------|---------------|-----------------|------|---------------|--------")
+    print("Name | Overhead (release) | Build (debug) | Parse (release) | Deps | Invalid UTF-8 | Downloads | Version")
+    print("-----|--------------------|---------------|-----------------|------|---------------|-----------|--------")
     for case in cases:
         row = [
             case["name"],
@@ -27,6 +27,7 @@ def main():
             fmt_time(case, "xargs"),
             str(case["deps"]),
             "Y" if case["osstr_basic"] else "N",
+            "https://img.shields.io/crates/dr/{}".format(case["name"]),
             case["version"] if case["version"] else "-",
         ]
         print(" | ".join(row))
