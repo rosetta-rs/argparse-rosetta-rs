@@ -8,4 +8,4 @@ name = "lexopt-app"
 path = "app.rs"
 
 [dependencies]
-lexopt = "0.1"
+lexopt = "0.2"
