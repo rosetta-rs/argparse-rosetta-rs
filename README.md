@@ -26,7 +26,7 @@ Name | Overhead (release) | Build (debug) | Parse (release) | Invalid UTF-8 | Do
 null | 0 KiB | 690ms | 1ms | Y | ![Download count](https://img.shields.io/crates/dr/None) | -
 argh | 30 KiB | 5s | 4ms | N | ![Download count](https://img.shields.io/crates/dr/argh) | v0.1.6
 clap | 623 KiB | 5s | 4ms | Y | ![Download count](https://img.shields.io/crates/dr/clap) | v2.33.3
-clap-minimal | 623 KiB | 7s | 3ms | N | ![Download count](https://img.shields.io/crates/dr/clap) | v3.0.0-rc.0
+clap-minimal | 623 KiB | 7s | 3ms | Y | ![Download count](https://img.shields.io/crates/dr/clap) | v3.0.0-rc.0
 clap3 | 665 KiB | 7s | 3ms | Y | ![Download count](https://img.shields.io/crates/dr/clap) | v3.0.0-rc.0
 clap_derive | 673 KiB | 14s | 2ms | Y | ![Download count](https://img.shields.io/crates/dr/clap) | v3.0.0-rc.0
 gumdrop | 24 KiB | 6s | 2ms | N | ![Download count](https://img.shields.io/crates/dr/gumdrop) | v0.8.0
