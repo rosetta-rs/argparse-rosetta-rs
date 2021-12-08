@@ -111,7 +111,6 @@ def main():
                 "manifest_path": str(manifest_path),
                 "crate": metadata["name"],
                 "version": metadata["version"],
-                "deps": metadata["deps"],
                 "build": build_report,
                 "xargs": xargs_report,
                 "size": file_size,
@@ -131,16 +130,13 @@ def harvest_metadata(manifest_path):
         self_line = lines.pop(0)
         name, version = _extract_line(self_line)
         unique = sorted(set(_extract_line(line) for line in lines if "(*)" not in line and "[build-dependencies]" not in line))
-        deps = len(unique)
     else:
         name = None
         version = None
-        deps = 0
 
     return {
         "name": name,
         "version": version,
-        "deps": deps,
     }
 
 
