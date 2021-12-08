@@ -1,4 +1,4 @@
-use clap::{App, Arg, ArgSettings};
+use clap::{App, Arg};
 
 #[derive(Debug)]
 struct AppArgs {
@@ -45,7 +45,7 @@ fn main() {
             Arg::new("INPUT")
                 .takes_value(true)
                 .multiple_values(true)
-                .setting(ArgSettings::AllowInvalidUtf8),
+                .allow_invalid_utf8(true),
         )
         .get_matches();
 
