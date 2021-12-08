@@ -24,13 +24,13 @@ fn main() {
             Arg::new("number")
                 .long("number")
                 .required(true)
-                .about("Sets a number")
+                .help("Sets a number")
                 .takes_value(true),
         )
         .arg(
             Arg::new("opt-number")
                 .long("opt-number")
-                .about("Sets an optional number")
+                .help("Sets an optional number")
                 .takes_value(true),
         )
         .arg(
@@ -38,7 +38,7 @@ fn main() {
                 .long("width")
                 .default_value("10")
                 .validator(is_width)
-                .about("Sets width")
+                .help("Sets width")
                 .takes_value(true),
         )
         .arg(Arg::new("INPUT").takes_value(true).multiple_values(true))
