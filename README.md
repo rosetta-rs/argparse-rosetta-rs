@@ -23,17 +23,15 @@ docs*
 
 Name | Overhead (release) | Build (debug) | Parse (release) | Invalid UTF-8 | Downloads | Version
 -----|--------------------|---------------|-----------------|---------------|-----------|--------
-null | 0 KiB | 690ms | 1ms | Y | ![Download count](https://img.shields.io/crates/dr/None) | -
-argh | 30 KiB | 5s | 4ms | N | ![Download count](https://img.shields.io/crates/dr/argh) | v0.1.6
-clap | 623 KiB | 5s | 4ms | Y | ![Download count](https://img.shields.io/crates/dr/clap) | v2.33.3
-clap-minimal | 623 KiB | 7s | 3ms | Y | ![Download count](https://img.shields.io/crates/dr/clap) | v3.0.0-rc.0
-clap3 | 665 KiB | 7s | 3ms | Y | ![Download count](https://img.shields.io/crates/dr/clap) | v3.0.0-rc.0
-clap_derive | 673 KiB | 14s | 2ms | Y | ![Download count](https://img.shields.io/crates/dr/clap) | v3.0.0-rc.0
-gumdrop | 24 KiB | 6s | 2ms | N | ![Download count](https://img.shields.io/crates/dr/gumdrop) | v0.8.0
-lexopt | 35 KiB | 959ms | 3ms | Y | ![Download count](https://img.shields.io/crates/dr/lexopt) | v0.2.0
-pico-args | 23 KiB | 1s | 2ms | Y | ![Download count](https://img.shields.io/crates/dr/pico-args) | v0.4.2
-structopt | 623 KiB | 10s | 2ms | Y | ![Download count](https://img.shields.io/crates/dr/structopt) | v0.3.25
-xflags | 23 KiB | 2s | 2ms | Y | ![Download count](https://img.shields.io/crates/dr/xflags) | v0.2.3
+null | 0 KiB | 695ms | 2ms | Y | ![Download count](https://img.shields.io/crates/dr/None) | -
+argh | 30 KiB | 6s | 2ms | N | ![Download count](https://img.shields.io/crates/dr/argh) | v0.1.7
+clap | 678 KiB | 6s | 3ms | Y | ![Download count](https://img.shields.io/crates/dr/clap) | v3.0.0
+clap-minimal | 633 KiB | 6s | 2ms | Y | ![Download count](https://img.shields.io/crates/dr/clap) | v3.0.0
+clap_derive | 687 KiB | 14s | 2ms | Y | ![Download count](https://img.shields.io/crates/dr/clap) | v3.0.0
+gumdrop | 24 KiB | 6s | 3ms | N | ![Download count](https://img.shields.io/crates/dr/gumdrop) | v0.8.0
+lexopt | 27 KiB | 934ms | 2ms | Y | ![Download count](https://img.shields.io/crates/dr/lexopt) | v0.2.0
+pico-args | 23 KiB | 941ms | 3ms | Y | ![Download count](https://img.shields.io/crates/dr/pico-args) | v0.4.2
+xflags | 23 KiB | 2s | 3ms | Y | ![Download count](https://img.shields.io/crates/dr/xflags) | v0.2.3
 
 *System: Linux 5.4.0-84-generic (x86_64) w/ `-j 8`*
 

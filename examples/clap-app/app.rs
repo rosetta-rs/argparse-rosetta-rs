@@ -1,4 +1,4 @@
-use clap::{value_t, App, Arg};
+use clap::{App, Arg};
 
 #[derive(Debug)]
 struct AppArgs {
@@ -9,7 +9,7 @@ struct AppArgs {
     input: Vec<std::path::PathBuf>,
 }
 
-fn is_width(s: String) -> Result<(), String> {
+fn is_width(s: &str) -> Result<(), String> {
     let w: u32 = s.parse().map_err(|_| "not a number")?;
     if w != 0 {
         Ok(())
@@ -21,34 +21,39 @@ fn is_width(s: String) -> Result<(), String> {
 fn main() {
     let matches = App::new("App")
         .arg(
-            Arg::with_name("number")
+            Arg::new("number")
                 .long("number")
                 .required(true)
                 .help("Sets a number")
                 .takes_value(true),
         )
         .arg(
-            Arg::with_name("opt-number")
+            Arg::new("opt-number")
                 .long("opt-number")
                 .help("Sets an optional number")
                 .takes_value(true),
         )
         .arg(
-            Arg::with_name("width")
+            Arg::new("width")
                 .long("width")
                 .default_value("10")
                 .validator(is_width)
                 .help("Sets width")
                 .takes_value(true),
         )
-        .arg(Arg::with_name("INPUT").takes_value(true).multiple(true))
+        .arg(
+            Arg::new("INPUT")
+                .takes_value(true)
+                .multiple_values(true)
+                .allow_invalid_utf8(true),
+        )
         .get_matches();
 
     let args = AppArgs {
         help: matches.is_present("help"),
-        number: value_t!(matches, "number", u32).unwrap(),
-        opt_number: value_t!(matches, "opt-number", u32).ok(),
-        width: value_t!(matches, "width", u32).unwrap(),
+        number: matches.value_of_t("number").unwrap(),
+        opt_number: matches.value_of_t("opt-number").ok(),
+        width: matches.value_of_t("width").unwrap(),
         input: matches
             .values_of_os("INPUT")
             .unwrap()
