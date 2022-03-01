@@ -1,4 +1,4 @@
-use clap::{App, Arg};
+use clap::{Arg, Command};
 
 #[derive(Debug)]
 struct AppArgs {
@@ -19,7 +19,7 @@ fn is_width(s: &str) -> Result<(), String> {
 }
 
 fn main() {
-    let matches = App::new("App")
+    let matches = Command::new("App")
         .arg(
             Arg::new("number")
                 .long("number")
