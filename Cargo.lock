@@ -62,6 +62,19 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "bef38d45163c2f1dde094a7dfd33ccf595c92905c8f8f4fdc18d06fb1037718a"
 
 [[package]]
+name = "bpaf"
+version = "0.3.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "dba13e5c0d9314ca471d8b10e2fbf245b3f83a904cfb0a9d50f12b72971b12cd"
+
+[[package]]
+name = "bpaf-app"
+version = "0.1.0"
+dependencies = [
+ "bpaf",
+]
+
+[[package]]
 name = "clap"
 version = "3.1.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
