@@ -47,6 +47,10 @@ $ ./bench.py
 $ ./format.py
 ```
 
+To be included, the crate needs meet one of the following criteria:
+- 10k+ recent downloads
+- Unique API design
+
 # Special Thanks
 
 - RazrFalcon for creating the [initial benchmarks](https://github.com/RazrFalcon/pico-args)
