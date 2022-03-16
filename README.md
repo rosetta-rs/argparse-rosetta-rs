@@ -8,7 +8,8 @@ Name                                                 | Style                 | N
 -----------------------------------------------------|-----------------------|------
 No-op                                                | N/A                   | N/A
 [argh](https://github.com/google/argh)               | `derive`              |
-[clap](https://github.com/clap-rs/clap)              | Imperative or `derive`| Color, suggested fixes, completions
+[bpaf](https://github.com/pacak/bpaf)                | Combinator            |
+[clap](https://github.com/clap-rs/clap)              | Builder or `derive`   | Color, suggested fixes, completions
 [gumpdrop](https://github.com/murarth/gumdrop)       | `derive`              |
 [lexopt](https://github.com/blyxxyz/lexopt)          | Imperative            | No help generation
 [pico-args](https://github.com/razrfalcon/pico-args) | Imperative            | No help generation
