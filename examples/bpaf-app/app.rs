@@ -34,11 +34,14 @@ fn main() {
         .argument("WIDTH")
         .parse(as_width)
         .fallback(10);
-    let input = positional_os("INPUT")
-        .map(PathBuf::from)
-        .many();
+    let input = positional_os("INPUT").map(PathBuf::from).many();
 
-    let parser = construct!(AppArgs { number, opt_number, width, input });
+    let parser = construct!(AppArgs {
+        number,
+        opt_number,
+        width,
+        input
+    });
     let args = Info::default().descr("App").for_parser(parser).run();
 
     if 10 < args.input.len() {
