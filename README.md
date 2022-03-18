@@ -10,7 +10,7 @@ No-op                                                | N/A                   | N
 [argh](https://github.com/google/argh)               | `derive`              |
 [bpaf](https://github.com/pacak/bpaf)                | Combinator            |
 [clap](https://github.com/clap-rs/clap)              | Builder or `derive`   | Color, suggested fixes, completions
-[gumpdrop](https://github.com/murarth/gumdrop)       | `derive`              |
+[gumdrop](https://github.com/murarth/gumdrop)        | `derive`              |
 [lexopt](https://github.com/blyxxyz/lexopt)          | Imperative            | No help generation
 [pico-args](https://github.com/razrfalcon/pico-args) | Imperative            | No help generation
 [structopt](https://github.com/texitoi/structopt)    | `derive`              | Color, suggested fixes, completions
