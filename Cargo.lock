@@ -63,9 +63,9 @@ checksum = "bef38d45163c2f1dde094a7dfd33ccf595c92905c8f8f4fdc18d06fb1037718a"
 
 [[package]]
 name = "bpaf"
-version = "0.3.0"
+version = "0.3.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "dba13e5c0d9314ca471d8b10e2fbf245b3f83a904cfb0a9d50f12b72971b12cd"
+checksum = "5444c3016c57b548d9e45e85cddaaa987a48449148f464ba4af854e95fb46a01"
 
 [[package]]
 name = "bpaf-app"
