@@ -13,7 +13,6 @@ No-op                                                | N/A                   | N
 [gumdrop](https://github.com/murarth/gumdrop)        | `derive`              |
 [lexopt](https://github.com/blyxxyz/lexopt)          | Imperative            | No help generation
 [pico-args](https://github.com/razrfalcon/pico-args) | Imperative            | No help generation
-[structopt](https://github.com/texitoi/structopt)    | `derive`              | Color, suggested fixes, completions
 [xflags](https://github.com/matklad/xflags)          | proc-macro            |
 
 *Note: any non-performanve comparison is meant to provide context for what you
