@@ -1,0 +1,12 @@
+[package]
+name = "clap_lex-app"
+version = "0.1.0"
+authors = ["Evgeniy Reizner <razrfalcon@gmail.com>"]
+edition = "2018"
+
+[[bin]]
+name = "clap_lex-app"
+path = "app.rs"
+
+[dependencies]
+clap_lex = "0.1"

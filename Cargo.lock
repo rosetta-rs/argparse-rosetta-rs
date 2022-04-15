@@ -126,6 +126,22 @@ dependencies = [
 ]
 
 [[package]]
+name = "clap_lex"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "d716edb7c26222b1b21de6e6d505b274f9f3db9e7bc2e06baf389d57ae842df8"
+dependencies = [
+ "os_str_bytes",
+]
+
+[[package]]
+name = "clap_lex-app"
+version = "0.1.0"
+dependencies = [
+ "clap_lex",
+]
+
+[[package]]
 name = "gumdrop"
 version = "0.8.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
