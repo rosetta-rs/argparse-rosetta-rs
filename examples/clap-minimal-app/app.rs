@@ -1,18 +1,17 @@
-use clap::{Arg, Command};
+use clap::{value_parser, Arg, Command};
 
 #[derive(Debug)]
 struct AppArgs {
-    help: bool,
     number: u32,
     opt_number: Option<u32>,
     width: u32,
     input: Vec<std::path::PathBuf>,
 }
 
-fn is_width(s: &str) -> Result<(), String> {
-    let w: u32 = s.parse().map_err(|_| "not a number")?;
+fn parse_width(s: &str) -> Result<u32, String> {
+    let w = s.parse().map_err(|_| "not a number")?;
     if w != 0 {
-        Ok(())
+        Ok(w)
     } else {
         Err("width must be positive".to_string())
     }
@@ -25,39 +24,40 @@ fn main() {
                 .long("number")
                 .required(true)
                 .help("Sets a number")
+                .value_parser(value_parser!(u32))
                 .takes_value(true),
         )
         .arg(
             Arg::new("opt-number")
                 .long("opt-number")
                 .help("Sets an optional number")
+                .value_parser(value_parser!(u32))
                 .takes_value(true),
         )
         .arg(
             Arg::new("width")
                 .long("width")
                 .default_value("10")
-                .validator(is_width)
                 .help("Sets width")
+                .value_parser(parse_width)
                 .takes_value(true),
         )
         .arg(
             Arg::new("INPUT")
                 .takes_value(true)
                 .multiple_values(true)
-                .allow_invalid_utf8(true),
+                .value_parser(value_parser!(std::path::PathBuf)),
         )
         .get_matches();
 
     let args = AppArgs {
-        help: matches.is_present("help"),
-        number: matches.value_of_t("number").unwrap(),
-        opt_number: matches.value_of_t("opt-number").ok(),
-        width: matches.value_of_t("width").unwrap(),
+        number: *matches.get_one::<u32>("number").unwrap(),
+        opt_number: matches.get_one::<u32>("opt-number").cloned(),
+        width: matches.get_one::<u32>("width").cloned().unwrap(),
         input: matches
-            .values_of_os("INPUT")
-            .unwrap()
-            .map(|s| s.into())
+            .get_many::<std::path::PathBuf>("INPUT")
+            .unwrap_or_default()
+            .cloned()
             .collect(),
     };
 
