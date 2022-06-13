@@ -1,6 +1,6 @@
 use std::path::PathBuf;
 
-use bpaf::{construct, long, positional_os, Info, Parser};
+use bpaf::{construct, long, positional_os, Info};
 
 #[derive(Debug, Clone)]
 struct AppArgs {
@@ -44,6 +44,9 @@ fn main() {
     });
     let args = Info::default().descr("App").for_parser(parser).run();
 
+    println!("{:#?}", args.number);
+    println!("{:#?}", args.opt_number);
+    println!("{:#?}", args.width);
     if 10 < args.input.len() {
         println!("{:#?}", args.input.len());
     } else {

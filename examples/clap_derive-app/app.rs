@@ -29,6 +29,9 @@ fn parse_width(s: &str) -> Result<u32, String> {
 
 fn main() {
     let args = AppArgs::parse();
+    println!("{:#?}", args.number);
+    println!("{:#?}", args.opt_number);
+    println!("{:#?}", args.width);
     if 10 < args.input.len() {
         println!("{:#?}", args.input.len());
     } else {
