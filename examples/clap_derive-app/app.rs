@@ -3,18 +3,18 @@ use clap::Parser;
 #[derive(Parser, Debug)]
 struct AppArgs {
     /// Sets a number.
-    #[clap(long)]
+    #[clap(long, action)]
     number: u32,
 
     /// Sets an optional number.
-    #[clap(long)]
+    #[clap(long, action)]
     opt_number: Option<u32>,
 
     /// Sets width.
-    #[clap(long, default_value = "10", parse(try_from_str = parse_width))]
+    #[clap(long, default_value = "10", value_parser = parse_width)]
     width: u32,
 
-    #[clap(parse(from_os_str))]
+    #[clap(action)]
     input: Vec<std::path::PathBuf>,
 }
 
@@ -29,6 +29,9 @@ fn parse_width(s: &str) -> Result<u32, String> {
 
 fn main() {
     let args = AppArgs::parse();
+    println!("{:#?}", args.number);
+    println!("{:#?}", args.opt_number);
+    println!("{:#?}", args.width);
     if 10 < args.input.len() {
         println!("{:#?}", args.input.len());
     } else {
