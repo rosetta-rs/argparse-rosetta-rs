@@ -24,7 +24,7 @@ docs*
 
 Name | Overhead (release) | Build (debug) | Parse (release) | Invalid UTF-8 | Downloads | Version
 -----|--------------------|---------------|-----------------|---------------|-----------|--------
-null | 0 KiB | 639ms | 3ms | Y | ![Download count](https://img.shields.io/crates/dr/None) | -
+null | 0 KiB | 639ms | 3ms | Y | - | -
 argh | 41 KiB | 5s | 3ms | N | ![Download count](https://img.shields.io/crates/dr/argh) | v0.1.7
 bpaf | 157 KiB | 1s | 5ms | Y | ![Download count](https://img.shields.io/crates/dr/bpaf) | v0.4.3
 clap | 650 KiB | 6s | 4ms | Y | ![Download count](https://img.shields.io/crates/dr/clap) | v3.2.1
