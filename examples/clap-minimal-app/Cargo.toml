@@ -9,4 +9,4 @@ name = "clap-minimal-app"
 path = "app.rs"
 
 [dependencies]
-clap = { version = "3.2.16", default-features = false, features = ["std"] }
+clap = { version = "3.2.17", default-features = false, features = ["std"] }
