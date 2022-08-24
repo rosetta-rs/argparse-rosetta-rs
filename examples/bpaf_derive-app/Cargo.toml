@@ -1,0 +1,11 @@
+[package]
+name = "bpaf_derive-app"
+version = "0.1.0"
+edition = "2018"
+
+[[bin]]
+name = "bpaf_derive-app"
+path = "app.rs"
+
+[dependencies]
+bpaf = { version = "0.5.3", features = ["derive"] }
