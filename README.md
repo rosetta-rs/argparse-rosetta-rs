@@ -24,19 +24,22 @@ docs*
 
 Name | Overhead (release) | Build (debug) | Parse (release) | Invalid UTF-8 | Downloads | Version
 -----|--------------------|---------------|-----------------|---------------|-----------|--------
-null | 0 KiB | 639ms | 3ms | Y | - | -
-argh | 41 KiB | 5s | 3ms | N | ![Download count](https://img.shields.io/crates/dr/argh) | v0.1.7
-bpaf | 157 KiB | 1s | 5ms | Y | ![Download count](https://img.shields.io/crates/dr/bpaf) | v0.4.3
-clap | 650 KiB | 6s | 4ms | Y | ![Download count](https://img.shields.io/crates/dr/clap) | v3.2.1
-clap-minimal | 619 KiB | 5s | 4ms | Y | ![Download count](https://img.shields.io/crates/dr/clap) | v3.2.1
-clap_derive | 678 KiB | 12s | 4ms | Y | ![Download count](https://img.shields.io/crates/dr/clap) | v3.2.1
-clap_lex | 39 KiB | 1s | 3ms | Y | ![Download count](https://img.shields.io/crates/dr/clap_lex) | v0.2.2
-gumdrop | 37 KiB | 5s | 3ms | N | ![Download count](https://img.shields.io/crates/dr/gumdrop) | v0.8.1
-lexopt | 39 KiB | 854ms | 3ms | Y | ![Download count](https://img.shields.io/crates/dr/lexopt) | v0.2.0
-pico-args | 23 KiB | 849ms | 4ms | Y | ![Download count](https://img.shields.io/crates/dr/pico-args) | v0.4.2
-xflags | 22 KiB | 1s | 3ms | Y | ![Download count](https://img.shields.io/crates/dr/xflags) | v0.2.4
+null | 0 KiB | 408ms | 3ms | Y | - | -
+argh | 35 KiB | 5s | 3ms | N | ![Download count](https://img.shields.io/crates/dr/argh) | v0.1.8
+bpaf | 144 KiB | 1s | 3ms | Y | ![Download count](https://img.shields.io/crates/dr/bpaf) | v0.5.5
+bpaf_derive | 144 KiB | 9s | 4ms | Y | ![Download count](https://img.shields.io/crates/dr/bpaf) | v0.5.5
+clap | 695 KiB | 6s | 3ms | Y | ![Download count](https://img.shields.io/crates/dr/clap) | v3.2.20
+clap-minimal | 646 KiB | 5s | 3ms | Y | ![Download count](https://img.shields.io/crates/dr/clap) | v3.2.20
+clap_derive | 733 KiB | 12s | 4ms | Y | ![Download count](https://img.shields.io/crates/dr/clap) | v3.2.20
+clap_lex | 37 KiB | 799ms | 3ms | Y | ![Download count](https://img.shields.io/crates/dr/clap_lex) | v0.2.4
+gumdrop | 33 KiB | 4s | 3ms | N | ![Download count](https://img.shields.io/crates/dr/gumdrop) | v0.8.1
+lexopt | 36 KiB | 615ms | 3ms | Y | ![Download count](https://img.shields.io/crates/dr/lexopt) | v0.2.1
+pico-args | 24 KiB | 600ms | 3ms | Y | ![Download count](https://img.shields.io/crates/dr/pico-args) | v0.5.0
+xflags | 24 KiB | 1s | 3ms | Y | ![Download count](https://img.shields.io/crates/dr/xflags) | v0.2.4
 
 *System: Linux 5.4.0-104-generic (x86_64) w/ `-j 8`*
+
+*rustc: rustc 1.63.0 (4b91a6ea7 2022-08-08)*
 
 Notes:
 - Overhead will be lower if your application shares dependencies with your argument parsing library.
