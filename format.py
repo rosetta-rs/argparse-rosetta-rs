@@ -36,6 +36,8 @@ def main():
         print(" | ".join(row))
     print()
     print(f"*System: {data['os']} {data['os_ver']} ({data['arch']}) w/ `-j {data['cpus']}`*")
+    print()
+    print(f"*rustc: {data['rustc']}*")
 
 
 def fmt_time(case, bench):

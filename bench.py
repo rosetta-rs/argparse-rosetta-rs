@@ -26,6 +26,9 @@ def main():
     else:
         old_raw_run = {}
 
+    rustc_p = subprocess.run(["rustc", "-V"], capture_output=True, check=True, encoding="utf8")
+    rustc_version = rustc_p.stdout.strip()
+
     raw_run = {
         "timestamp": timestamp,
         "hostname": hostname,
@@ -33,6 +36,7 @@ def main():
         "os_ver": uname.release,
         "arch": uname.machine,
         "cpus": cpus,
+        "rustc": rustc_version,
         "libs": {},
     }
 
