@@ -16,6 +16,8 @@ No-op                                                | N/A                   | N
 [pico-args](https://github.com/razrfalcon/pico-args) | Imperative            | No help generation
 [xflags](https://github.com/matklad/xflags)          | proc-macro            |
 
+See also [an examination of design trade offs](docs/tradeoffs.md)
+
 *Note: any non-performance comparison is meant to provide context for what you
 gain/lose with each crate's overhead.  For a full comparison, see each parser
 docs*
