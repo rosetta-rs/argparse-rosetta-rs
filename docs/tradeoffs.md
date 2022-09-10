@@ -31,9 +31,10 @@ keys are the argument IDs and the values are effectively `Box<dyn Any>`.
 - `clap` can have ready-to-use, arbitrarily deifned defaults and validation
   conditioned on argument values (e.g. `default_value_if`).  See the section on
   Validation for more nuance on the "arbitrarily" part
-- `clap` tries to help push as many errors to early test time with minimal
-  effort with the `cmd.debug_assert()` function.  Value lookups still requires
-  full coverage of that code to catch errors.
+- While not many errors are at compile-time, `clap` tries to help push as many
+  errors to early test-time with minimal effort with the `cmd.debug_assert()`
+  function.  Value lookups still requires full coverage of that code to catch
+  errors.
 
 Which design approach is faster to build will be dependent on the exact
 implementation and the compiler.
