@@ -11,6 +11,10 @@ For anyone asking the question "which should I use?", the short answer would be
   trade offs.   If you want to just choose one with little research that will
   cover the most use cases, that will most likely be `clap`.
 
+Meta:
+- This was written as of clap 3.2.21 and bpaf 0.5.7 though the focus was more on design goals (though bpaf might be expanding their design goals)
+- This was written by the maintainer of clap with [input from the maintainer of bpaf](https://github.com/rosetta-rs/argparse-rosetta-rs/pull/50)
+
 ## Static vs Dynamic Typing
 
 `bpaf`'s combinator API uses generics and macros to build a statically-typed
