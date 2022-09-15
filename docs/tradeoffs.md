@@ -32,7 +32,7 @@ keys are the argument IDs and the values are effectively `Box<dyn Any>`.
   [clap_serde](https://docs.rs/clap_serde) or [conditionally-present
   flags](https://github.com/sharkdp/bat/blob/6680f65e4b25b0f18c455f7a4639a96e97519dc5/src/bin/bat/clap_app.rs#L556)
 - Callers can dynamically iterate over the arguments, like for layered configs.
-- `clap` can have ready-to-use, arbitrarily deifned defaults and validation
+- `clap` can have ready-to-use, arbitrarily defined defaults and validation
   conditioned on argument values (e.g. `default_value_if`).  See the section on
   Validation for more nuance on the "arbitrarily" part
 - While not many errors are at compile-time, `clap` tries to help push as many
