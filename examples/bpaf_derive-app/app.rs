@@ -20,7 +20,7 @@ struct AppArgs {
     )]
     width: u32,
 
-    #[bpaf(positional_os("INPUT"))]
+    #[bpaf(positional("INPUT"))]
     input: Vec<std::path::PathBuf>,
 }
 
