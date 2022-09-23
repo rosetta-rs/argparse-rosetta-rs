@@ -12,7 +12,7 @@ For anyone asking the question "which should I use?", the short answer would be
   cover the most use cases, that will most likely be `clap`.
 
 Meta:
-- This was written as of clap 3.2.21 and bpaf 0.5.7 though the focus was more on design goals (though bpaf might be expanding their design goals)
+- This was written as of clap 3.2.21 and bpaf 0.6.0 though the focus was more on design goals
 - This was written by the maintainer of clap with [input from the maintainer of bpaf](https://github.com/rosetta-rs/argparse-rosetta-rs/pull/50)
 
 ## Static vs Dynamic Typing
@@ -68,18 +68,21 @@ developer mistakes.
 
 `bpaf` instead does context-free tokenization, storing all flags and values in
 a list.
-- Tokens that look like flags can only be considered flags, unless escaped with
-  `--`, not allowing cases like `fd --exec rm -rf ;`
-- Short flags can only have attached values in the `-a=b` case (not even `-ab=c`)
+- By default tokens that look like flags can only be considered flags,
+  unless escaped with `--`.
 - An argument is resolved as either a subcommand, positional value, or a flag's
   value based on the order that the they are processed (as determined by their
   definition order)
+- With context manipulation modifiers you can parse a large variety of cases:
+  `find`'s `--exec rm -rf ;`, `Xorg`'s `+foo -foo`, `dd`'s `count=N if=foo of=bar`,
+  windows standard `/opt`, sequential command chaining, "option structures", multi
+  value options, etc: https://docs.rs/bpaf/0.6.0/bpaf/_unusual/index.html
 
-While `bpaf` supports fewer use case / CLI styles, it has an overall simpler
-parser that then scales up in runtime, build time, and code size based on the
-arguments themselves, only paying for what you use.  In addition, some
-context-sensitive cases can be reproduced using the argument combinators (e.g.
-`--color [WHEN]`).
+While `bpaf` supports fewer convenience methods out of the box, it has an overall
+simpler parser that then scales up in runtime, build time, and code size based on
+the arguments themselves, only paying for what you use.
+
+
 
 ## Validation
 
@@ -136,8 +139,10 @@ varying backgrounds solving different problems and `clap` has taken input and
 adapted to help meet a variety of needs.
 
 `bpaf` is a younger project but it is able to move a lot more quickly because
-of the fewer requirements it is trying to fulfill.  `bpaf` already covers
-common cases for creating a polished CLI.
+it aims to provide minimal set of tools for users to create a desired combination
+rather than the combinations themselves.  `bpaf` already covers
+most of the common cases for creating a polished CLI out of the box but can be
+used to parse a lot more with some extra manual effort.
 
 An exact feature-by-feature comparison is out of the scope as `clap` and `bpaf`
 are both constantly evolving.

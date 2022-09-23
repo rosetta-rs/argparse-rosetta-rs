@@ -1,6 +1,6 @@
 use std::path::PathBuf;
 
-use bpaf::{construct, long, positional_os, Parser};
+use bpaf::{construct, long, positional, Parser};
 
 #[derive(Debug, Clone)]
 struct AppArgs {
@@ -22,19 +22,17 @@ fn as_width(s: String) -> Result<u32, String> {
 fn main() {
     let number = long("number")
         .help("Sets a number")
-        .argument("NUMBER")
-        .from_str::<u32>();
+        .argument::<u32>("NUMBER");
     let opt_number = long("opt-number")
         .help("Sets an optional number")
-        .argument("OPT-NUMBER")
-        .from_str()
+        .argument::<u32>("OPT-NUMBER")
         .optional();
     let width = long("width")
         .help("Sets width")
-        .argument("WIDTH")
+        .argument::<String>("WIDTH")
         .parse(as_width)
         .fallback(10);
-    let input = positional_os("INPUT").map(PathBuf::from).many();
+    let input = positional::<PathBuf>("INPUT").many();
 
     let parser = construct!(AppArgs {
         number,
