@@ -21,7 +21,9 @@ Meta:
 parser, pushing development errors to compile time.  This minimizes binary
 size and runtime, only paying for what you use.
 
-The combinator approach tends towards yoda-speak though with [careful
+The combinator approach tends towards yoda-speak (like
+[yoda conditions](https://en.wikipedia.org/wiki/Yoda_conditions)),
+though with [careful
 structuring by breaking down arguments into
 functions](https://github.com/pacak/bpaf/blob/aa6992931bbfbdca6390c87f4a76898f8db0ae47/examples/top_to_bottom.rs),
 a more straightforward ordering can be accomplished.
