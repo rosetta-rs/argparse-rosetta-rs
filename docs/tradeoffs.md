@@ -119,7 +119,7 @@ Both libraries provide derive APIs that mask over the static and dynamic typing 
 
 In `bpaf`s case, the combinators still show through in terms of requiring the
 user to organize their data structures around their validation.  Some times
-this is good (pushing errors to design and compile time like if mutually exclusive
+this is good (pushing errors to compile time like if mutually exclusive
 arguments are represented in an `enum`) while at other times it has the potential to convolute the code.
 
 In `clap`s case, it has the challenge of hand-implemented support to express
