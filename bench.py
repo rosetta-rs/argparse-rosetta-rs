@@ -45,17 +45,17 @@ def main():
             manifest_path = example_path / "Cargo.toml"
             metadata = harvest_metadata(manifest_path)
 
-            build_report_path = pathlib.Path(tmpdir) / f"{example_path.name}-build.json"
+            full_build_report_path = pathlib.Path(tmpdir) / f"{example_path.name}-build.json"
             if True:
                 hyperfine_cmd = [
                     "hyperfine",
                     "--warmup=1",
                     "--min-runs=5",
-                    f"--export-json={build_report_path}",
+                    f"--export-json={full_build_report_path}",
                     "--prepare=cargo clean",
                     # Doing debug builds because that is more likely the
                     # time directly impacting people
-                    f"cargo build -j {cpus} --package {example_path.name}"
+                    f"cargo build -j {cpus} --manifest-path {example_path}/Cargo.toml"
                 ]
                 if False:
                     hyperfine_cmd.append("--show-output")
@@ -64,9 +64,32 @@ def main():
                     cwd=repo_root,
                     check=True,
                 )
-                build_report = json.loads(build_report_path.read_text())
+                full_build_report = json.loads(full_build_report_path.read_text())
             else:
-                build_report = old_raw_run.get("libs", {}).get(str(manifest_path), {}).get("build", None)
+                full_build_report = old_raw_run.get("libs", {}).get(str(manifest_path), {}).get("build_inc", None)
+
+            inc_build_report_path = pathlib.Path(tmpdir) / f"{example_path.name}-build.json"
+            if True:
+                hyperfine_cmd = [
+                    "hyperfine",
+                    "--warmup=1",
+                    "--min-runs=5",
+                    f"--export-json={inc_build_report_path}",
+                    f"--prepare=touch {example_path}/app.rs",
+                    # Doing debug builds because that is more likely the
+                    # time directly impacting people
+                    f"cargo build -j {cpus} --manifest-path {example_path}/Cargo.toml"
+                ]
+                if False:
+                    hyperfine_cmd.append("--show-output")
+                subprocess.run(
+                    hyperfine_cmd,
+                    cwd=repo_root,
+                    check=True,
+                )
+                inc_build_report = json.loads(inc_build_report_path.read_text())
+            else:
+                inc_build_report = old_raw_run.get("libs", {}).get(str(manifest_path), {}).get("build_inc", None)
 
             if True:
                 # Doing release builds because that is where size probably matters most
@@ -115,7 +138,8 @@ def main():
                 "manifest_path": str(manifest_path),
                 "crate": metadata["name"],
                 "version": metadata["version"],
-                "build": build_report,
+                "build_inc": inc_build_report,
+                "build_full": full_build_report,
                 "xargs": xargs_report,
                 "size": file_size,
                 "works": works,
