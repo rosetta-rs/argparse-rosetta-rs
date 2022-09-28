@@ -27,7 +27,7 @@ def main():
         row = [
             case["name"],
             fmt_size(case, cases[0]),
-            fmt_time(case, "build"),
+            "{} *(full)* <br/>{} *(incremental)*".format(fmt_time(case, "build_full"), fmt_time(case, "build_inc")),
             fmt_time(case, "xargs"),
             "Y" if case["osstr_basic"] else "N",
             count_link,
