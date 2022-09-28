@@ -9,4 +9,4 @@ name = "clap_lex-app"
 path = "app.rs"
 
 [dependencies]
-clap_lex = "0.2.4"
+clap_lex = "0.3.0"

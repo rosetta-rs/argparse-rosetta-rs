@@ -9,4 +9,4 @@ name = "clap_derive-app"
 path = "app.rs"
 
 [dependencies]
-clap = { version = "3.2.19", features = ["derive"] }
+clap = { version = "4.0.0", features = ["derive"] }

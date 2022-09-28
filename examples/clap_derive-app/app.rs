@@ -3,18 +3,17 @@ use clap::Parser;
 #[derive(Parser, Debug)]
 struct AppArgs {
     /// Sets a number.
-    #[clap(long, action)]
+    #[arg(long)]
     number: u32,
 
     /// Sets an optional number.
-    #[clap(long, action)]
+    #[arg(long)]
     opt_number: Option<u32>,
 
     /// Sets width.
-    #[clap(long, default_value = "10", value_parser = parse_width)]
+    #[arg(long, default_value = "10", value_parser = parse_width)]
     width: u32,
 
-    #[clap(action)]
     input: Vec<std::path::PathBuf>,
 }
 

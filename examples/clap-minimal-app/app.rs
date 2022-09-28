@@ -24,28 +24,24 @@ fn main() {
                 .long("number")
                 .required(true)
                 .help("Sets a number")
-                .value_parser(value_parser!(u32))
-                .takes_value(true),
+                .value_parser(value_parser!(u32)),
         )
         .arg(
             Arg::new("opt-number")
                 .long("opt-number")
                 .help("Sets an optional number")
-                .value_parser(value_parser!(u32))
-                .takes_value(true),
+                .value_parser(value_parser!(u32)),
         )
         .arg(
             Arg::new("width")
                 .long("width")
                 .default_value("10")
-                .help("Sets width")
                 .value_parser(parse_width)
-                .takes_value(true),
+                .help("Sets width"),
         )
         .arg(
             Arg::new("INPUT")
-                .takes_value(true)
-                .multiple_values(true)
+                .num_args(1..)
                 .value_parser(value_parser!(std::path::PathBuf)),
         )
         .get_matches();
