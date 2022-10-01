@@ -57,9 +57,9 @@ checksum = "bef38d45163c2f1dde094a7dfd33ccf595c92905c8f8f4fdc18d06fb1037718a"
 
 [[package]]
 name = "bpaf"
-version = "0.6.0"
+version = "0.6.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a26b84feed0bdb469496d0aef81ff5a0c26265e28aff4e12b14bd6437a5503e8"
+checksum = "42efc66e688b6433a6763382c4edda86483ec063e5f18e929c31f70d69c29c02"
 dependencies = [
  "bpaf_derive",
 ]
@@ -91,9 +91,9 @@ dependencies = [
 
 [[package]]
 name = "clap"
-version = "4.0.0"
+version = "4.0.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "422592638015fe46332afb8fbf9361d9fa2d498d05c0c384e28710b4639e33a5"
+checksum = "0a1af219c3e254a8b4649d6ddaef886b2015089f35f2ac5e1db31410c0566ab8"
 dependencies = [
  "atty",
  "bitflags",
@@ -120,9 +120,9 @@ dependencies = [
 
 [[package]]
 name = "clap_derive"
-version = "4.0.0"
+version = "4.0.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "677ca5a153ca1804d4bf3e9d45f0f6b5ba4f950de155e373d457cd5f154cca9c"
+checksum = "cd114ae53ce5a0670f43d2f169c1cd26c69b4896b0c121900cf1e4d06d67316c"
 dependencies = [
  "heck 0.4.0",
  "proc-macro-error",

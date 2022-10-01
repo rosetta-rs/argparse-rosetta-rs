@@ -9,4 +9,4 @@ name = "bpaf-app"
 path = "app.rs"
 
 [dependencies]
-bpaf = "0.6.0"
+bpaf = "0.6.1"
