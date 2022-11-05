@@ -8,4 +8,4 @@ name = "xflags-app"
 path = "app.rs"
 
 [dependencies]
-xflags = "0.2"
+xflags = "0.3.1"
