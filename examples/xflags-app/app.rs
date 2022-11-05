@@ -6,9 +6,8 @@ mod flags {
         src "./app.rs"
 
         cmd app
-            repeated input: PathBuf
         {
-            optional --help
+            repeated input: PathBuf
             /// Sets a number
             required --number number: u32
             /// Sets an optional number
@@ -25,7 +24,6 @@ mod flags {
     pub struct App {
         pub input: Vec<PathBuf>,
 
-        pub help: bool,
         pub number: u32,
         pub opt_number: Option<u32>,
         pub width: Option<u32>,
@@ -60,23 +58,15 @@ mod flags {
 
 fn main() {
     let args = match flags::App::from_env() {
-        Ok(args) => {
-            if args.help {
-                println!("{}", flags::App::HELP);
-                std::process::exit(0);
-            }
-            args
-        }
+        Ok(args) => args,
         Err(err) => {
-            eprintln!("{}", err);
-            std::process::exit(2);
+            err.exit();
         }
     };
     match args.validate() {
         Ok(()) => {}
         Err(err) => {
-            eprintln!("{}", err);
-            std::process::exit(2);
+            err.exit();
         }
     }
     println!("{:#?}", args.number);
