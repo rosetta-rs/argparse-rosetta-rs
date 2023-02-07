@@ -8,6 +8,7 @@ Name                                                 | Style                 | N
 -----------------------------------------------------|-----------------------|------
 No-op                                                | N/A                   | N/A
 [argh](https://github.com/google/argh)               | `derive`              |
+[argp](https://github.com/jirutka/argp)              | `derive`              |
 [bpaf](https://github.com/pacak/bpaf)                | Combinatoric or `derive` |
 [clap_lex](https://github.com/clap-rs/clap)          | Imperative            | No help generation
 [clap](https://github.com/clap-rs/clap)              | Builder or `derive`   | Color, suggested fixes, completions

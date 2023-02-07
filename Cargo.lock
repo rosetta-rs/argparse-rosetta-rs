@@ -39,6 +39,33 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "149f75bbec1827618262e0855a68f0f9a7f2edc13faebf33c4f16d6725edb6a9"
 
 [[package]]
+name = "argp"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "22db9a339b8eb6d93d4b32374db2464b9cb4b802aadab1c19baaf0d98cf1f6ec"
+dependencies = [
+ "argp_derive",
+]
+
+[[package]]
+name = "argp-app"
+version = "0.1.0"
+dependencies = [
+ "argp",
+]
+
+[[package]]
+name = "argp_derive"
+version = "0.1.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "90f3ef96a4491d4465ed959837cc30eea24b68262cceeb9e0843e33b691cee59"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn",
+]
+
+[[package]]
 name = "bitflags"
 version = "1.3.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"

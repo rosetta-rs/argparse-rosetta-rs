@@ -1,0 +1,12 @@
+[package]
+name = "argp-app"
+version = "0.1.0"
+authors = ["Evgeniy Reizner <razrfalcon@gmail.com>"]
+edition = "2018"
+
+[[bin]]
+name = "argp-app"
+path = "app.rs"
+
+[dependencies]
+argp = "0.1.0"
