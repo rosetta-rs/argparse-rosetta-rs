@@ -30,7 +30,10 @@ mod flags {
     }
 
     impl App {
-        pub const HELP: &'static str = Self::HELP_;
+        #[allow(dead_code)]
+        pub fn from_env_or_exit() -> Self {
+            Self::from_env_or_exit_()
+        }
 
         #[allow(dead_code)]
         pub fn from_env() -> xflags::Result<Self> {
