@@ -26,18 +26,18 @@ docs*
 
 Name | Overhead (release) | Build (debug) | Parse (release) | Invalid UTF-8 | Downloads | Version
 -----|--------------------|---------------|-----------------|---------------|-----------|--------
-null | 0 KiB | 461ms *(full)* <br/>246ms *(incremental)* | 1ms | Y | - | -
-argh | 36 KiB | 5s *(full)* <br/>292ms *(incremental)* | 1ms | N | ![Download count](https://img.shields.io/crates/dr/argh) | v0.1.10
-bpaf | 221 KiB | 2s *(full)* <br/>348ms *(incremental)* | 2ms | Y | ![Download count](https://img.shields.io/crates/dr/bpaf) | v0.7.10
-bpaf_derive | 220 KiB | 8s *(full)* <br/>349ms *(incremental)* | 2ms | Y | ![Download count](https://img.shields.io/crates/dr/bpaf) | v0.7.10
-clap | 607 KiB | 7s *(full)* <br/>574ms *(incremental)* | 2ms | Y | ![Download count](https://img.shields.io/crates/dr/clap) | v4.1.12
-clap-minimal | 426 KiB | 4s *(full)* <br/>448ms *(incremental)* | 2ms | Y | ![Download count](https://img.shields.io/crates/dr/clap) | v4.1.12
-clap_derive | 644 KiB | 12s *(full)* <br/>644ms *(incremental)* | 1ms | Y | ![Download count](https://img.shields.io/crates/dr/clap) | v4.1.12
-clap_lex | 33 KiB | 882ms *(full)* <br/>277ms *(incremental)* | 1ms | Y | ![Download count](https://img.shields.io/crates/dr/clap_lex) | v0.3.3
-gumdrop | 33 KiB | 5s *(full)* <br/>301ms *(incremental)* | 1ms | N | ![Download count](https://img.shields.io/crates/dr/gumdrop) | v0.8.1
-lexopt | 32 KiB | 721ms *(full)* <br/>266ms *(incremental)* | 1ms | Y | ![Download count](https://img.shields.io/crates/dr/lexopt) | v0.3.0
-pico-args | 28 KiB | 662ms *(full)* <br/>266ms *(incremental)* | 1ms | Y | ![Download count](https://img.shields.io/crates/dr/pico-args) | v0.5.0
-xflags | 23 KiB | 1s *(full)* <br/>286ms *(incremental)* | 1ms | Y | ![Download count](https://img.shields.io/crates/dr/xflags) | v0.3.1
+null | 0 KiB | 354ms *(full)* <br/>204ms *(incremental)* | 3ms | Y | - | -
+argh | 36 KiB | 4s *(full)* <br/>238ms *(incremental)* | 4ms | N | ![Download count](https://img.shields.io/crates/dr/argh) | v0.1.10
+bpaf | 221 KiB | 1s *(full)* <br/>273ms *(incremental)* | 5ms | Y | ![Download count](https://img.shields.io/crates/dr/bpaf) | v0.7.10
+bpaf_derive | 220 KiB | 6s *(full)* <br/>274ms *(incremental)* | 4ms | Y | ![Download count](https://img.shields.io/crates/dr/bpaf) | v0.7.10
+clap | 608 KiB | 6s *(full)* <br/>488ms *(incremental)* | 4ms | Y | ![Download count](https://img.shields.io/crates/dr/clap) | v4.2.0
+clap-minimal | 395 KiB | 3s *(full)* <br/>364ms *(incremental)* | 4ms | Y | ![Download count](https://img.shields.io/crates/dr/clap) | v4.2.0
+clap_derive | 641 KiB | 8s *(full)* <br/>511ms *(incremental)* | 4ms | Y | ![Download count](https://img.shields.io/crates/dr/clap) | v4.2.0
+clap_lex | 32 KiB | 559ms *(full)* <br/>224ms *(incremental)* | 3ms | Y | ![Download count](https://img.shields.io/crates/dr/clap_lex) | v0.4.1
+gumdrop | 33 KiB | 4s *(full)* <br/>233ms *(incremental)* | 3ms | N | ![Download count](https://img.shields.io/crates/dr/gumdrop) | v0.8.1
+lexopt | 32 KiB | 534ms *(full)* <br/>216ms *(incremental)* | 4ms | Y | ![Download count](https://img.shields.io/crates/dr/lexopt) | v0.3.0
+pico-args | 28 KiB | 532ms *(full)* <br/>218ms *(incremental)* | 3ms | Y | ![Download count](https://img.shields.io/crates/dr/pico-args) | v0.5.0
+xflags | 23 KiB | 990ms *(full)* <br/>213ms *(incremental)* | 3ms | Y | ![Download count](https://img.shields.io/crates/dr/xflags) | v0.3.1
 
 *System: Linux 5.4.0-104-generic (x86_64) w/ `-j 8`*
 
