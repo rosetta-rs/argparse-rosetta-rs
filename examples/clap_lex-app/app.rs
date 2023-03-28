@@ -69,7 +69,7 @@ fn parse_args() -> Result<AppArgs, BoxedError> {
                 Ok("number") => {
                     let value = if let Some(value) = value {
                         value.to_str().ok_or_else(|| {
-                            format!("Value `{}` is not a number", value.to_str_lossy())
+                            format!("Value `{}` is not a number", value.to_string_lossy())
                         })?
                     } else {
                         let value = raw
@@ -84,7 +84,7 @@ fn parse_args() -> Result<AppArgs, BoxedError> {
                 Ok("opt-number") => {
                     let value = if let Some(value) = value {
                         value.to_str().ok_or_else(|| {
-                            format!("Value `{}` is not a number", value.to_str_lossy())
+                            format!("Value `{}` is not a number", value.to_string_lossy())
                         })?
                     } else {
                         let value = raw
@@ -99,7 +99,7 @@ fn parse_args() -> Result<AppArgs, BoxedError> {
                 Ok("width") => {
                     let value = if let Some(value) = value {
                         value.to_str().ok_or_else(|| {
-                            format!("Value `{}` is not a number", value.to_str_lossy())
+                            format!("Value `{}` is not a number", value.to_string_lossy())
                         })?
                     } else {
                         let value = raw
@@ -126,14 +126,12 @@ fn parse_args() -> Result<AppArgs, BoxedError> {
                         return Err(format!("Unexpected flag: -{}", c).into());
                     }
                     Err(e) => {
-                        return Err(format!("Unexpected flag: -{}", e.to_str_lossy()).into());
+                        return Err(format!("Unexpected flag: -{}", e.to_string_lossy()).into());
                     }
                 }
             }
         } else {
-            input.push(std::path::PathBuf::from(
-                arg.to_value_os().to_os_str().into_owned(),
-            ));
+            input.push(std::path::PathBuf::from(arg.to_value_os().to_owned()));
         }
     }
 
