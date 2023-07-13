@@ -112,7 +112,7 @@ fn parse_args() -> Result<AppArgs, BoxedError> {
                     width = parse_width(value)?;
                 }
                 _ => {
-                    return Err(format!("Unexpected flag: --{}", arg.display()).into());
+                    return Err(format!("Unexpected flag: {}", arg.display()).into());
                 }
             }
         } else if let Some(mut shorts) = arg.to_short() {
