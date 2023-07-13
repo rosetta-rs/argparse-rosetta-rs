@@ -50,7 +50,7 @@ mod flags {
     impl App {
         pub fn validate(&self) -> xflags::Result<()> {
             if let Some(width) = self.width {
-                if width != 0 {
+                if width == 0 {
                     return Err(xflags::Error::new("width must be positive"));
                 }
             }
