@@ -4,17 +4,27 @@ This repo tries to assess Rust arg parsing performance.
 
 We currently compare:
 
-Name                                                 | Style                 | Notes
------------------------------------------------------|-----------------------|------
-No-op                                                | N/A                   | N/A
-[argh](https://github.com/google/argh)               | `derive`              |
-[bpaf](https://github.com/pacak/bpaf)                | Combinatoric or `derive` |
-[clap_lex](https://github.com/clap-rs/clap)          | Imperative            | No help generation
-[clap](https://github.com/clap-rs/clap)              | Builder or `derive`   | Color, suggested fixes, completions
-[gumdrop](https://github.com/murarth/gumdrop)        | `derive`              |
-[lexopt](https://github.com/blyxxyz/lexopt)          | Imperative            | No help generation
-[pico-args](https://github.com/razrfalcon/pico-args) | Imperative            | No help generation
-[xflags](https://github.com/matklad/xflags)          | proc-macro            |
+## Feature description
+
+- Help - automatically generate app usage with all the arguments and show it on `--help`
+- Color - use ANSI codes to add styles in generated help or error messages
+- Fixes - detect possible typos and suggest fixes
+- Completion - generate autocompletion scripts from parser definition. Static completion allows
+  to complete flag and command names, dynamic completions allows to complete possible values as
+  well
+- Documentation - generate user documentation in markdown (for web usage) or man (for \*nix
+  console)
+
+Name                                                 | Style                 | Help | Color | Fixes | Comp S, D | Doc md, man |
+-----------------------------------------------------|-----------------------|------|-------|-------|-----------|-------------|
+[argh](https://github.com/google/argh)               | `derive`              | :heavy_check_mark: | :x: | :x: | :x:, :x: | :x:, :x: |
+[bpaf](https://github.com/pacak/bpaf)             | Combinatoric or `derive` |  :heavy_check_mark:   | :heavy_check_mark:     | :heavy_check_mark:     | :x:, :heavy_check_mark:      | :heavy_check_mark:, :heavy_check_mark:        |
+[clap_lex](https://github.com/clap-rs/clap)          | Imperative            | :x:    | :x:     | :x:     | :x:, :x:      | :x:, :x:        |
+[clap](https://github.com/clap-rs/clap)              | Builder or `derive`   | :heavy_check_mark:    | :heavy_check_mark:     | :heavy_check_mark:     | :heavy_check_mark:, :x:      | :heavy_check_mark:, :heavy_check_mark:        |
+[gumdrop](https://github.com/murarth/gumdrop)        | `derive`              | :heavy_check_mark:    | :x:     | :x:     | :x:, :x:      | :x:, :x:        |
+[lexopt](https://github.com/blyxxyz/lexopt)          | Imperative            | :x:    | :x:     | :x:     | :x:, :x:      | :x:, :x:        |
+[pico-args](https://github.com/razrfalcon/pico-args) | Imperative            | :x:    | :x:     | :x:     | :x:, :x:      | :x:, :x:        |
+[xflags](https://github.com/matklad/xflags)          | proc-macro            | :heavy_check_mark:    | :x:     | :x:     | :x:, :x:      | :x:, :x:        |
 
 See also [an examination of design trade offs](docs/tradeoffs.md)
 
