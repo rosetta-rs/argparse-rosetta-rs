@@ -1,26 +1,35 @@
 {
-  "schedule": [
-    "before 3am on the first day of the month"
+  schedule: [
+    'before 3am on the first day of the month',
   ],
-  "semanticCommits": "enabled",
-  "configMigration": true,
-  "packageRules": [
+  semanticCommits: 'enabled',
+  configMigration: true,
+  dependencyDashboard: true,
+  packageRules: [
     // Goals:
     // - Rollup safe upgrades to reduce CI runner load
     // - Have lockfile and manifest in-sync
     {
-      "matchManagers": ["cargo"],
-      "matchCurrentVersion": ">=0.1.0",
-      "matchUpdateTypes": ["patch"],
-      "automerge": true,
-      "groupName": "compatible",
+      matchManagers: [
+        'cargo',
+      ],
+      matchCurrentVersion: '>=0.1.0',
+      matchUpdateTypes: [
+        'patch',
+      ],
+      automerge: true,
+      groupName: 'compatible',
     },
     {
-      "matchManagers": ["cargo"],
-      "matchCurrentVersion": ">=1.0.0",
-      "matchUpdateTypes": ["minor"],
-      "automerge": true,
-      "groupName": "compatible",
+      matchManagers: [
+        'cargo',
+      ],
+      matchCurrentVersion: '>=1.0.0',
+      matchUpdateTypes: [
+        'minor',
+      ],
+      automerge: true,
+      groupName: 'compatible',
     },
   ],
 }
