@@ -8,4 +8,4 @@ name = "bpaf_derive-app"
 path = "app.rs"
 
 [dependencies]
-bpaf = { version = "0.9.5", features = ["derive"] }
+bpaf = { version = "0.9.6", features = ["derive"] }
