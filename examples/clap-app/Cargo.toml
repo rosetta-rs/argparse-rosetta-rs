@@ -9,4 +9,4 @@ name = "clap-app"
 path = "app.rs"
 
 [dependencies]
-clap = "4.4.10"
+clap = "4.4.12"
