@@ -35,13 +35,15 @@ def main():
         ]
         print(" | ".join(row))
     print()
-    print(f"*System: {data['os']} {data['os_ver']} ({data['arch']}) w/ `-j {data['cpus']}`*")
-    print()
-    print(f"*rustc: {data['rustc']}*")
+    print(f"*System: {data['os']} {data['os_ver']} ({data['arch']}), {data.get('rustc', '')} w/ `-j {data['cpus']}`*")
 
 
 def fmt_time(case, bench):
-    value = case[bench]["results"][0]["median"]
+    bench = case[bench]
+    if bench is None:
+        return "N/A"
+
+    value = bench["results"][0]["median"]
     if value < 1:
         value *= 1000
         return "{:.0f}ms".format(value)
