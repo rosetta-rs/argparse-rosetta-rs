@@ -37,14 +37,18 @@ fn main() {
             std::process::exit(1);
         }
     };
-    println!("{:#?}", args.number);
-    println!("{:#?}", args.opt_number);
-    println!("{:#?}", args.width);
-    if 10 < args.input.len() {
-        println!("{:#?}", args.input.len());
-    } else {
-        println!("{:#?}", args);
+    #[cfg(debug_assertions)]
+    {
+        println!("{:#?}", args.number);
+        println!("{:#?}", args.opt_number);
+        println!("{:#?}", args.width);
+        if 10 < args.input.len() {
+            println!("{:#?}", args.input.len());
+        } else {
+            println!("{:#?}", args);
+        }
     }
+    std::hint::black_box(args);
 }
 
 fn parse_args() -> Result<AppArgs, BoxedError> {
