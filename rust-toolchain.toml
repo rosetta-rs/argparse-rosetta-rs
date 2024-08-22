@@ -3,5 +3,5 @@
 # so that performance more consistent consistent
 # clarifies how rust influences parameters
 channel = "1.80.0"
-components = ["rust-analyzer", "tree"]
+components = ["tree"]
 profile = "default"
