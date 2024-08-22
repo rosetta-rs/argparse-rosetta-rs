@@ -2,11 +2,11 @@
 name = "clap-minimal-app"
 version = "0.1.0"
 authors = ["Evgeniy Reizner <razrfalcon@gmail.com>"]
-edition = "2018"
+edition = "2021"
 
 [[bin]]
 name = "clap-minimal-app"
 path = "app.rs"
 
 [dependencies]
-clap = { version = "4.5.4", default-features = false, features = ["std"] }
+clap = { version = "4.5.16", default-features = false, features = ["std"] }

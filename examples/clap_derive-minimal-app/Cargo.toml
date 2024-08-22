@@ -1,0 +1,12 @@
+[package]
+name = "clap_derive-minimal-app"
+version = "0.1.0"
+authors = ["Evgeniy Reizner <razrfalcon@gmail.com>"]
+edition = "2021"
+
+[[bin]]
+name = "clap_derive-minimal-app"
+path = "app.rs"
+
+[dependencies]
+clap = { version = "4.5.16", features = ["derive"], default-features = false }
