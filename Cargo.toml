@@ -5,4 +5,4 @@ members = [
 ]
 
 [workspace.package]
-edition = "2018"
+edition = "2021"
