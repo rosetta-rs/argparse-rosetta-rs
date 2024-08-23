@@ -62,7 +62,7 @@ dependencies = [
 
 [[package]]
 name = "argh-app"
-version = "0.1.0"
+version = "0.0.0"
 dependencies = [
  "argh",
 ]
@@ -99,7 +99,7 @@ dependencies = [
 
 [[package]]
 name = "bpaf-app"
-version = "0.1.0"
+version = "0.0.0"
 dependencies = [
  "bpaf",
 ]
@@ -117,7 +117,7 @@ dependencies = [
 
 [[package]]
 name = "bpaf_derive-app"
-version = "0.1.0"
+version = "0.0.0"
 dependencies = [
  "bpaf",
 ]
@@ -134,14 +134,14 @@ dependencies = [
 
 [[package]]
 name = "clap-app"
-version = "0.1.0"
+version = "0.0.0"
 dependencies = [
  "clap",
 ]
 
 [[package]]
 name = "clap-minimal-app"
-version = "0.1.0"
+version = "0.0.0"
 dependencies = [
  "clap",
 ]
@@ -172,7 +172,7 @@ dependencies = [
 
 [[package]]
 name = "clap_derive-app"
-version = "0.1.0"
+version = "0.0.0"
 dependencies = [
  "clap",
 ]
@@ -185,7 +185,7 @@ checksum = "98cc8fbded0c607b7ba9dd60cd98df59af97e84d24e49c8557331cfc26d301ce"
 
 [[package]]
 name = "clap_lex-app"
-version = "0.1.0"
+version = "0.0.0"
 dependencies = [
  "clap_lex",
 ]
@@ -207,7 +207,7 @@ dependencies = [
 
 [[package]]
 name = "gumdrop-app"
-version = "0.1.0"
+version = "0.0.0"
 dependencies = [
  "gumdrop",
 ]
@@ -237,14 +237,14 @@ checksum = "baff4b617f7df3d896f97fe922b64817f6cd9a756bb81d40f8883f2f66dcb401"
 
 [[package]]
 name = "lexopt-app"
-version = "0.1.0"
+version = "0.0.0"
 dependencies = [
  "lexopt",
 ]
 
 [[package]]
 name = "null-app"
-version = "0.1.0"
+version = "0.0.0"
 
 [[package]]
 name = "pico-args"
@@ -254,7 +254,7 @@ checksum = "5be167a7af36ee22fe3115051bc51f6e6c7054c9348e28deb4f49bd6f705a315"
 
 [[package]]
 name = "pico-args-app"
-version = "0.1.0"
+version = "0.0.0"
 dependencies = [
  "pico-args",
 ]
@@ -414,7 +414,7 @@ dependencies = [
 
 [[package]]
 name = "xflags-app"
-version = "0.1.0"
+version = "0.0.0"
 dependencies = [
  "xflags",
 ]

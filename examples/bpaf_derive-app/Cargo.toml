@@ -1,6 +1,5 @@
 [package]
 name = "bpaf_derive-app"
-version = "0.1.0"
 edition = "2018"
 
 [[bin]]

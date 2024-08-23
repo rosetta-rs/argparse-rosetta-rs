@@ -1,7 +1,5 @@
 [package]
 name = "bpaf-app"
-version = "0.1.0"
-authors = ["René Kijewski <crates.io@k6i.de>"]
 edition = "2018"
 
 [[bin]]
