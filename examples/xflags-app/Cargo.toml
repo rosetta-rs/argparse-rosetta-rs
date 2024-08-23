@@ -1,6 +1,6 @@
 [package]
 name = "xflags-app"
-edition = "2018"
+edition.workspace = true
 
 [[bin]]
 name = "xflags-app"

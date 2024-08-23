@@ -1,6 +1,6 @@
 [package]
 name = "clap_lex-app"
-edition = "2018"
+edition.workspace = true
 
 [[bin]]
 name = "clap_lex-app"

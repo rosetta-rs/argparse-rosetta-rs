@@ -3,3 +3,6 @@ resolver = "2"
 members = [
     "examples/*",
 ]
+
+[workspace.package]
+edition = "2018"

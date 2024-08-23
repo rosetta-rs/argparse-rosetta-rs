@@ -1,6 +1,6 @@
 [package]
 name = "argh-app"
-edition = "2018"
+edition.workspace = true
 
 [[bin]]
 name = "argh-app"

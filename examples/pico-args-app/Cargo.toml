@@ -1,6 +1,6 @@
 [package]
 name = "pico-args-app"
-edition = "2018"
+edition.workspace = true
 
 [[bin]]
 name = "pico-args-app"

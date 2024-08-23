@@ -1,6 +1,6 @@
 [package]
 name = "clap-minimal-app"
-edition = "2018"
+edition.workspace = true
 
 [[bin]]
 name = "clap-minimal-app"

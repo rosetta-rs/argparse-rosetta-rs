@@ -1,6 +1,6 @@
 [package]
 name = "gumdrop-app"
-edition = "2018"
+edition.workspace = true
 
 [[bin]]
 name = "gumdrop-app"

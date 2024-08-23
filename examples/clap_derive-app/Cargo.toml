@@ -1,6 +1,6 @@
 [package]
 name = "clap_derive-app"
-edition = "2018"
+edition.workspace = true
 
 [[bin]]
 name = "clap_derive-app"

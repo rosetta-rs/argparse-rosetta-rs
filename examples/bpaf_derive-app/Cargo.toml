@@ -1,6 +1,6 @@
 [package]
 name = "bpaf_derive-app"
-edition = "2018"
+edition.workspace = true
 
 [[bin]]
 name = "bpaf_derive-app"
