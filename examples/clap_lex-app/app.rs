@@ -78,7 +78,7 @@ fn parse_args() -> Result<AppArgs, BoxedError> {
                     } else {
                         let value = raw
                             .next_os(&mut cursor)
-                            .ok_or_else(|| format!("`--number` is missing a value"))?;
+                            .ok_or_else(|| "`--number` is missing a value".to_owned())?;
                         value.to_str().ok_or_else(|| {
                             format!("Value `{}` is not a number", value.to_string_lossy())
                         })?
@@ -93,7 +93,7 @@ fn parse_args() -> Result<AppArgs, BoxedError> {
                     } else {
                         let value = raw
                             .next_os(&mut cursor)
-                            .ok_or_else(|| format!("`--number` is missing a value"))?;
+                            .ok_or_else(|| "`--number` is missing a value".to_owned())?;
                         value.to_str().ok_or_else(|| {
                             format!("Value `{}` is not a number", value.to_string_lossy())
                         })?
@@ -108,7 +108,7 @@ fn parse_args() -> Result<AppArgs, BoxedError> {
                     } else {
                         let value = raw
                             .next_os(&mut cursor)
-                            .ok_or_else(|| format!("`--number` is missing a value"))?;
+                            .ok_or_else(|| "`--number` is missing a value".to_owned())?;
                         value.to_str().ok_or_else(|| {
                             format!("Value `{}` is not a number", value.to_string_lossy())
                         })?
@@ -120,6 +120,7 @@ fn parse_args() -> Result<AppArgs, BoxedError> {
                 }
             }
         } else if let Some(mut shorts) = arg.to_short() {
+            #[allow(clippy::never_loop)] // leave this refactor-proof
             while let Some(short) = shorts.next_flag() {
                 match short {
                     Ok('h') => {
