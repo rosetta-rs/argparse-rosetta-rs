@@ -7,4 +7,4 @@ name = "clap_lex-app"
 path = "app.rs"
 
 [dependencies]
-clap_lex = "0.7.0"
+clap_lex = "1.0.0"
