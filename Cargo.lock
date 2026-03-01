@@ -52,13 +52,12 @@ dependencies = [
 
 [[package]]
 name = "argh"
-version = "0.1.13"
+version = "0.1.14"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "34ff18325c8a36b82f992e533ece1ec9f9a9db446bd1c14d4f936bac88fcd240"
+checksum = "7f384d96bfd3c0b3c41f24dae69ee9602c091d64fc432225cf5295b5abbe0036"
 dependencies = [
  "argh_derive",
  "argh_shared",
- "rust-fuzzy-search",
 ]
 
 [[package]]
@@ -70,9 +69,9 @@ dependencies = [
 
 [[package]]
 name = "argh_derive"
-version = "0.1.13"
+version = "0.1.14"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "adb7b2b83a50d329d5d8ccc620f5c7064028828538bdf5646acd60dc1f767803"
+checksum = "938e5f66269c1f168035e29ed3fb437b084e476465e9314a0328f4005d7be599"
 dependencies = [
  "argh_shared",
  "proc-macro2",
@@ -82,18 +81,18 @@ dependencies = [
 
 [[package]]
 name = "argh_shared"
-version = "0.1.13"
+version = "0.1.14"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a464143cc82dedcdc3928737445362466b7674b5db4e2eb8e869846d6d84f4f6"
+checksum = "5127f8a5bc1cfb0faf1f6248491452b8a5b6901068d8da2d47cbb285986ae683"
 dependencies = [
  "serde",
 ]
 
 [[package]]
 name = "bpaf"
-version = "0.9.22"
+version = "0.9.23"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4ffe12d9bbc54238745f1749c5a18dc5759e03c235618dd05554a9be350390b1"
+checksum = "22a59e5c2bac9ccb280150ef4b58e07e4169d8c5c6ce0f70170e3c0b7c7b6124"
 dependencies = [
  "bpaf_derive",
 ]
@@ -107,9 +106,9 @@ dependencies = [
 
 [[package]]
 name = "bpaf_derive"
-version = "0.5.21"
+version = "0.5.23"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9e7d8cbf45f5994072fad3eb22761aacbe8752bbe733a247f7d35827556ea057"
+checksum = "549ca9c364fdc06f9f36d1356980193d930abc80db848193c2dd4d0e9a83de1b"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -125,9 +124,9 @@ dependencies = [
 
 [[package]]
 name = "clap"
-version = "4.5.56"
+version = "4.5.60"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a75ca66430e33a14957acc24c5077b503e7d374151b2b4b3a10c83b4ceb4be0e"
+checksum = "2797f34da339ce31042b27d23607e051786132987f595b02ba4f6a6dffb7030a"
 dependencies = [
  "clap_builder",
  "clap_derive",
@@ -149,13 +148,13 @@ dependencies = [
 
 [[package]]
 name = "clap_builder"
-version = "4.5.56"
+version = "4.5.60"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "793207c7fa6300a0608d1080b858e5fdbe713cdc1c8db9fb17777d8a13e63df0"
+checksum = "24a241312cea5059b13574bb9b3861cabf758b879c15190b37b6d6fd63ab6876"
 dependencies = [
  "anstream",
  "anstyle",
- "clap_lex",
+ "clap_lex 1.0.0",
  "strsim",
 ]
 
@@ -185,10 +184,16 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "c3e64b0cc0439b12df2fa678eae89a1c56a529fd067a9115f7827f1fffd22b32"
 
 [[package]]
+name = "clap_lex"
+version = "1.0.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "3a822ea5bc7590f9d40f1ba12c0dc3c2760f3482c6984db1573ad11031420831"
+
+[[package]]
 name = "clap_lex-app"
 version = "0.0.0"
 dependencies = [
- "clap_lex",
+ "clap_lex 0.7.7",
 ]
 
 [[package]]
@@ -232,9 +237,9 @@ checksum = "2304e00983f87ffb38b55b444b5e3b60a884b5d30c0fca7d82fe33449bbe55ea"
 
 [[package]]
 name = "lexopt"
-version = "0.3.1"
+version = "0.3.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9fa0e2a1fcbe2f6be6c42e342259976206b383122fc152e872795338b5a3f3a7"
+checksum = "803ec87c9cfb29b9d2633f20cba1f488db3fd53f2158b1024cbefb47ba05d413"
 
 [[package]]
 name = "lexopt-app"
@@ -277,12 +282,6 @@ checksum = "573015e8ab27661678357f27dc26460738fd2b6c86e46f386fde94cb5d913105"
 dependencies = [
  "proc-macro2",
 ]
-
-[[package]]
-name = "rust-fuzzy-search"
-version = "0.1.1"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "a157657054ffe556d8858504af8a672a054a6e0bd9e8ee531059100c0fa11bb2"
 
 [[package]]
 name = "serde"
