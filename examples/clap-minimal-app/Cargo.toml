@@ -7,4 +7,4 @@ name = "clap-minimal-app"
 path = "app.rs"
 
 [dependencies]
-clap = { version = "4.5.4", default-features = false, features = ["std"] }
+clap = { version = "4.5.60", default-features = false, features = ["std"] }
