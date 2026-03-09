@@ -26,22 +26,20 @@ docs*
 
 Name | Overhead (release) | Build (debug) | Parse (release) | Invalid UTF-8 | Downloads | Version
 -----|--------------------|---------------|-----------------|---------------|-----------|--------
-null | 0 KiB | 234ms *(full)* <br/>172ms *(incremental)* | 3ms | Y | - | -
-argh | 38 KiB | 3s *(full)* <br/>203ms *(incremental)* | 4ms | N | ![Download count](https://img.shields.io/crates/dr/argh) | v0.1.10
-bpaf | 282 KiB | 965ms *(full)* <br/>236ms *(incremental)* | 5ms | Y | ![Download count](https://img.shields.io/crates/dr/bpaf) | v0.9.4
-bpaf_derive | 276 KiB | 4s *(full)* <br/>238ms *(incremental)* | 5ms | Y | ![Download count](https://img.shields.io/crates/dr/bpaf) | v0.9.4
-clap | 654 KiB | 3s *(full)* <br/>392ms *(incremental)* | 4ms | Y | ![Download count](https://img.shields.io/crates/dr/clap) | v4.4.0
-clap-minimal | 427 KiB | 2s *(full)* <br/>330ms *(incremental)* | 4ms | Y | ![Download count](https://img.shields.io/crates/dr/clap) | v4.4.0
-clap_derive | 689 KiB | 6s *(full)* <br/>410ms *(incremental)* | 4ms | Y | ![Download count](https://img.shields.io/crates/dr/clap) | v4.4.0
-clap_lex | 27 KiB | 407ms *(full)* <br/>188ms *(incremental)* | 3ms | Y | ![Download count](https://img.shields.io/crates/dr/clap_lex) | v0.5.1
-gumdrop | 37 KiB | 3s *(full)* <br/>198ms *(incremental)* | 3ms | N | ![Download count](https://img.shields.io/crates/dr/gumdrop) | v0.8.1
-lexopt | 34 KiB | 385ms *(full)* <br/>184ms *(incremental)* | 3ms | Y | ![Download count](https://img.shields.io/crates/dr/lexopt) | v0.3.0
-pico-args | 23 KiB | 384ms *(full)* <br/>185ms *(incremental)* | 3ms | Y | ![Download count](https://img.shields.io/crates/dr/pico-args) | v0.5.0
-xflags | 22 KiB | 709ms *(full)* <br/>179ms *(incremental)* | 3ms | Y | ![Download count](https://img.shields.io/crates/dr/xflags) | v0.3.1
+null | 0 KiB | 163ms *(full)* <br/>115ms *(incremental)* | 1ms | Y | - | -
+argh | 38 KiB | 4s *(full)* <br/>138ms *(incremental)* | 2ms | N | ![Download count](https://img.shields.io/crates/dr/argh) | v0.1.14
+bpaf | 256 KiB | 831ms *(full)* <br/>137ms *(incremental)* | 2ms | Y | ![Download count](https://img.shields.io/crates/dr/bpaf) | v0.9.23
+bpaf_derive | 253 KiB | 4s *(full)* <br/>140ms *(incremental)* | 2ms | Y | ![Download count](https://img.shields.io/crates/dr/bpaf) | v0.9.23
+clap | 574 KiB | 3s *(full)* <br/>170ms *(incremental)* | 2ms | Y | ![Download count](https://img.shields.io/crates/dr/clap) | v4.5.60
+clap-minimal | 377 KiB | 2s *(full)* <br/>155ms *(incremental)* | 2ms | Y | ![Download count](https://img.shields.io/crates/dr/clap) | v4.5.60
+clap_derive | 596 KiB | 4s *(full)* <br/>182ms *(incremental)* | 2ms | Y | ![Download count](https://img.shields.io/crates/dr/clap) | v4.5.60
+clap_lex | 28 KiB | 336ms *(full)* <br/>129ms *(incremental)* | 2ms | Y | ![Download count](https://img.shields.io/crates/dr/clap_lex) | v1.0.0
+gumdrop | 28 KiB | 2s *(full)* <br/>135ms *(incremental)* | 1ms | N | ![Download count](https://img.shields.io/crates/dr/gumdrop) | v0.8.1
+lexopt | 37 KiB | 329ms *(full)* <br/>124ms *(incremental)* | 2ms | Y | ![Download count](https://img.shields.io/crates/dr/lexopt) | v0.3.2
+pico-args | 24 KiB | 300ms *(full)* <br/>123ms *(incremental)* | 2ms | Y | ![Download count](https://img.shields.io/crates/dr/pico-args) | v0.5.0
+xflags | 23 KiB | 539ms *(full)* <br/>123ms *(incremental)* | 1ms | Y | ![Download count](https://img.shields.io/crates/dr/xflags) | v0.3.2
 
-*System: Linux 5.4.0-124-generic (x86_64) w/ `-j 8`*
-
-*rustc: rustc 1.72.0 (5680fa18f 2023-08-23)*
+*System: Linux 6.17.9-76061709-generic (x86_64), rustc 1.94.0 (4a4ef493e 2026-03-02) w/ `-j 8`*
 
 Notes:
 - Overhead will be lower if your application shares dependencies with your argument parsing library.
